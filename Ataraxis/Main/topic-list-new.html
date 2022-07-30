@@ -1,0 +1,60 @@
+<!-- BEGIN topics_list_box --><!-- BEGIN row --><!-- BEGIN header_table -->
+<div class="ata_topic_header_box">{topics_list_box.row.L_TITLE}</div>
+<!-- END header_table -->
+<!-- BEGIN header_row -->
+<strong>{topics_list_box.row.L_TITLE}</strong>
+<!-- END header_row -->
+
+<!-- BEGIN topic -->
+<!-- BEGIN table_sticky -->
+<div class="ata_topic_header_box">
+  {topics_list_box.row.topic.table_sticky.L_TITLE}
+</div>
+<!-- END table_sticky -->
+<script>
+  console.log("{topics_list_box.row.FOLDER_CLASSNAME}");
+</script>
+
+<div class="ata_topic_row">
+  <div class="ata_topic_row_left">
+    <div>Posté par: {topics_list_box.row.TOPIC_AUTHOR}</div>
+    <div class="ata_topic_views">
+      {topics_list_box.row.REPLIES}
+      <span> {L_REPLIES} / </span> {topics_list_box.row.VIEWS}
+      <span> {L_VIEWS}</span>
+    </div>
+  </div>
+  <div class="ata_topic_row_right">
+    <div class="ata_topic_row_title">{topics_list_box.row.TOPIC_TITLE}</div>
+    <section>
+      <div class="ata_topic_row_right_right">
+        <!-- BEGIN switch_description -->
+        <div class="ata_topic_row_description">
+          {topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}
+        </div>
+        <!-- END switch_description -->
+        <div>
+          Dernier post: {topics_list_box.row.LAST_POST_AUTHOR}
+          <div class="ata_topic_time">
+            ({topics_list_box.row.LAST_POST_TIME})
+          </div>
+        </div>
+      </div>
+
+      <div class="ata_topic_row_button_section">
+        <a href="{topics_list_box.row.U_VIEW_TOPIC}"
+          ><span class="ata_topic_row_open_button {topics_list_box.row.FOLDER_CLASSNAME}">Voir le sujet</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- END topic -->
+<!-- BEGIN no_topics -->
+<div class="ata_no_topics">
+  Il n'y a pas encore de sujets dans cette catégorie.
+</div>
+<!-- END no_topics -->
+
+<!-- END row --><!-- END topics_list_box -->

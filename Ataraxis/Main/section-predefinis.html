@@ -1,0 +1,190 @@
+<style>
+  .ata_slider_container {
+      margin: 15px 0;
+  }
+  #slider {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+  }
+
+  #slider input[type=radio] {
+      display: none;
+  }
+
+  #slider label {
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  #slides {
+      padding: 10px;
+      background: rgba(195, 104, 25, 0.673);
+      position: relative;
+      z-index: 1;
+  }
+
+  #overflow {
+      width: 100%;
+      overflow: hidden;
+  }
+
+  #slide1:checked~#slides .inner {
+      margin-left: 0;
+  }
+
+  #slide2:checked~#slides .inner {
+      margin-left: -100%;
+  }
+
+  #slide3:checked~#slides .inner {
+      margin-left: -200%;
+  }
+
+  #slide4:checked~#slides .inner {
+      margin-left: -300%;
+  }
+
+  #slide1:hover~#slides .inner {
+      margin-left: 0;
+  }
+
+  #slide2:hover~#slides .inner {
+      margin-left: -100%;
+  }
+
+  #slide3:hover~#slides .inner {
+      margin-left: -200%;
+  }
+
+  #slide4:hover~#slides .inner {
+      margin-left: -300%;
+  }
+
+  #slides .inner {
+      transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+      width: 400%;
+      line-height: 0;
+      height: 500px;
+  }
+
+  #slides .slide {
+      width: 25%;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: #fff;
+  }
+
+  #slides .slide_1 {
+      background: #00171F;
+  }
+
+  #slides .slide_2 {
+      background: #003459;
+  }
+
+  #slides .slide_3 {
+      background: #007EA7;
+  }
+
+  #slides .slide_4 {
+      background: #00A8E8;
+  }
+
+  #bullets {
+      margin: 15px 0 0;
+      text-align: center;
+      display: flex;
+      gap: 8px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  #bullets label {
+      display: inline-block;
+      padding: 15px;
+      background-color: #003459;
+      margin: 0 10px;
+      color: aliceblue;
+  }
+
+  #bullets label:hover {
+      background-color: #844e25;
+      color: aliceblue;
+  }
+
+  #slide1:checked~#bullets label:nth-child(1),
+  #slide2:checked~#bullets label:nth-child(2),
+  #slide3:checked~#bullets label:nth-child(3),
+  #slide4:checked~#bullets label:nth-child(4) {
+      background: rgb(186, 129, 36);
+  }
+
+  .ata_slide_content {
+    position: relative;
+    background-color: orange;
+    height: 100%;
+    width: 100%;
+  }
+  .ata_triangle {
+    background-color: red;
+    position: absolute;
+
+    top: 0;
+  }
+
+  @media screen and (max-width: 900px) {
+      #slides {
+          max-width: calc(100% - 140px);
+          margin: 0 auto;
+      }
+  }
+</style>
+<section class="ata_slider_container">
+  <div id="slider">
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2">
+      <input type="radio" name="slider" id="slide3">
+      <input type="radio" name="slider" id="slide4">
+      <div id="slides">
+          <div id="overflow">
+              <div class="inner">
+                  <div class="slide slide_1">
+                      <div class="ata_slide_content">
+                        <div class="ata_triangle">test</div>
+                      </div>
+                  </div>
+                  <div class="slide slide_2">
+                      <div class="slide-content">
+                          <h2>Slide 2</h2>
+                          <p>Content for Slide 2</p>
+                      </div>
+                  </div>
+                  <div class="slide slide_3">
+                      <div class="slide-content">
+                          <h2>Slide 3</h2>
+                          <p>Content for Slide 3</p>
+                      </div>
+                  </div>
+                  <div class="slide slide_4">
+                      <div class="slide-content">
+                          <h2>Slide 4</h2>
+                          <p>Content for Slide 4</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="bullets">
+          <label for="slide1">Titre du slide</label>
+          <label for="slide2">Titre du slide</label>
+          <label for="slide3">Titre du slide</label>
+          <label for="slide4">Titre du slide</label>
+      </div>
+  </div>
+</section>

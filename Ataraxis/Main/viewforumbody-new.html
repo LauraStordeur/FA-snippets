@@ -1,0 +1,130 @@
+<style>
+  .ata_top_nav_section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .ata_new_message_button {
+    padding: 15px;
+    background: rgb(94, 2, 2);
+    background: rgb(255, 199, 87);
+    background: radial-gradient(
+      circle,
+      rgba(255, 199, 87, 1) 0%,
+      rgba(232, 171, 73, 0.40379901960784315) 90%
+    );
+    color: black;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 25px;
+  }
+  .ata_new_message_button:hover {
+    color: aliceblue;
+    background: radial-gradient(
+      circle,
+      rgb(145, 2, 2) 0%,
+      rgba(232, 147, 73, 0.616) 90%
+    );
+    box-shadow: 1px 11px 16px 2px rgba(0, 0, 0, 0.54);
+    -webkit-box-shadow: 1px 11px 16px 2px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 1px 11px 16px 2px rgba(0, 0, 0, 0.54);
+  }
+  .ata_link_new_container > a,
+  .ata_link_item {
+    outline: none;
+    text-decoration: none;
+  }
+  .ata_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #022739;
+    margin: 25px 0;
+    color: orange;
+  }
+  .ata_nav > a {
+    color: aliceblue;
+  }
+  .ata_nav_item {
+    padding: 0 15px;
+    color: aliceblue;
+  }
+  a.nav {
+    color: aliceblue;
+  }
+  .ata_action_buttons_container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
+    margin: 15px 0;
+  }
+  .ata_action_buttons_container > a,
+  .ata_action_buttons_container > div {
+    padding: 15px;
+    background-color: #022739;
+    color: aliceblue;
+  }
+  .ata_action_buttons_container > a,
+  .ata_action_buttons_container > div > a {
+    color: aliceblue;
+  }
+  .ata_action_buttons_container > a:hover,
+  .ata_action_buttons_container > div:hover {
+    background-color: #14435a;
+  }
+  .ata_permissions_forum {
+    background-color: #022739b4;
+    padding: 35px 15px;
+    color: orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 0 0 15px 0;
+  }
+  .ata_permissions_forum > div > a {
+    color: aqua;
+  }
+</style>
+<!-- Start forum content -->
+
+<section class="ata_top_nav_section">
+  <div class="ata_nav">
+    <a class="ata_nav_item" href="{U_INDEX}"><span>{L_INDEX}</span></a
+    >{NAV_CAT_DESC}
+  </div>
+  {BOARD_INDEX}
+  <!-- BEGIN switch_user_authpost -->
+  <a class="ata_link_item" href="{U_POST_NEW_TOPIC}" rel="nofollow"
+    ><div class="ata_new_message_button">Nouveau sujet</div></a
+  >
+  <!-- END switch_user_authpost -->
+</section>
+
+{TOPICS_LIST_BOX}
+
+<section class="ata_top_nav_section">
+  <!-- BEGIN switch_user_authpost -->
+  <a class="ata_link_item" href="{U_POST_NEW_TOPIC}" rel="nofollow"
+    ><div class="ata_new_message_button">Nouveau sujet</div></a
+  >
+  <!-- END switch_user_authpost -->
+  <section class="ata_action_buttons_container">
+    <a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a>
+    <div>{S_WATCH_FORUM}</div>
+    <div>{MODERATORS}</div>
+  </section>
+  <div class="ata_nav">
+    <a class="ata_nav_item" href="{U_INDEX}"><span>{L_INDEX}</span></a
+    >{NAV_CAT_DESC}
+  </div>
+</section>
+
+<section class="ata_permissions_forum">
+  <div>{L_TABS_PERMISSIONS}</div>
+  <div>{S_AUTH_LIST}</div>
+</section>

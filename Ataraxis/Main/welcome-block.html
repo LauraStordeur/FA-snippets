@@ -1,0 +1,72 @@
+<style>
+  .welcome_box {
+    width: 100%;
+  }
+  .ata_nav_container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: #ff9b3d;
+  color: #231342;
+  padding: 12px;
+  max-width: 150px;
+}
+.ata_nav_container > a {
+  padding: 10px;
+  font-size: medium;
+}
+.bodylinewidth {
+  width: 80%;
+  margin-top: 200px
+}
+.ata_logo {
+  width: 40vw;
+}
+.ata_content_flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.ata_main_content {
+  width: calc(100vw - 250px);
+}
+</style>
+<main class="ata_content_flex">
+    <!-- Barre de navigation -->
+    <section class="ata_nav_container">
+      {GENERATED_NAV_BAR}
+    </section>
+    <!-- Contenu Principal -->
+    <section class="ata_main_content">
+      <section class="welcome_box">
+        <a href="{U_INDEX}"><img loading="lazy" class="ata_logo" src="{LOGO}" id="i_logo" border="0" alt="{L_INDEX}"/></a>
+      </section>
+
+      <!-- Debut du contenu -->
+      <table cellpadding="0" cellspacing="0" width="100%" class="three-col">
+        <tbody>
+        <tr>
+          <td valign="top" width="{C1SIZE}">
+            <div id="{ID_LEFT}">
+              <!-- BEGIN giefmod_index1 -->
+              {giefmod_index1.MODVAR}
+              <!-- BEGIN saut -->
+              <div></div>
+              <!-- END saut -->
+              <!-- END giefmod_index1 -->
+            </div>
+          </td>
+          <td valign="top" width="100%">
+            <!-- BEGIN html_validation -->
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+
+</main>

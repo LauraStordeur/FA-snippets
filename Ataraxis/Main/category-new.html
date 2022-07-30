@@ -1,0 +1,44 @@
+
+<!-- BEGIN catrow --><!-- BEGIN tablehead -->
+<section class="ata_title_container">{catrow.tablehead.L_FORUM}</section>
+<!-- END tablehead -->
+
+<!-- BEGIN forumrow -->
+<a href="{catrow.forumrow.U_VIEWFORUM}">
+  <section class="ata_row">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        {catrow.forumrow.FORUM_DESC}
+        <div class="{catrow.forumrow.FOLDER_CLASSNAME}">
+          new
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="ata_avatar_cat">
+      <!-- BEGIN avatar -->
+      {catrow.forumrow.avatar.LAST_POST_AVATAR}
+      <!-- END avatar -->
+      <div class="ata_last_post">
+        Dernier post: {catrow.forumrow.LAST_POST}
+      </div>
+    </div>
+  </section>
+</a>
+
+<section class="ata_container_under_card">
+
+  <section class="ata_sub_cat_row">
+    <!-- emplacement des sous-catégories -->
+    {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
+  </section>
+  <div class="ata_topic_number">
+    S : {catrow.forumrow.TOPICS} / R: {catrow.forumrow.POSTS}
+  </div>
+
+
+</section>
+
+<!-- END forumrow -->
+
+<!-- END catrow -->

@@ -1,0 +1,374 @@
+{JAVASCRIPT}
+<!-- BEGIN message_admin_index -->
+<table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="0">
+	<!-- BEGIN message_admin_titre -->
+	<tr>
+		<td class="catHead" height="28"><span class="cattitle">{message_admin_index.message_admin_titre.MES_TITRE}</span></td>
+	</tr>
+	<!-- END message_admin_titre -->
+	<!-- BEGIN message_admin_txt -->
+	<tr>
+		<td class="row1" rowspan="3" align="center" valign="middle">
+		<div class="gensmall">{message_admin_index.message_admin_txt.MES_TXT}</div>
+		</td>
+	</tr>
+	<!-- END message_admin_txt -->
+</table>
+<!-- END message_admin_index -->
+
+<!-- Section Predefinis début -->
+<style>
+    .ata_slider_container {
+        margin: 15px 0;
+    }
+    #slider {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #slider input[type=radio] {
+        display: none;
+    }
+
+    #slider label {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #slides {
+        padding: 10px;
+        background: rgba(195, 104, 25, 0.673);
+        position: relative;
+        z-index: 1;
+    }
+
+    #overflow {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #slide1:checked~#slides .inner {
+        margin-left: 0;
+    }
+
+    #slide2:checked~#slides .inner {
+        margin-left: -100%;
+    }
+
+    #slide3:checked~#slides .inner {
+        margin-left: -200%;
+    }
+
+    #slide4:checked~#slides .inner {
+        margin-left: -300%;
+    }
+
+    #slide1:hover~#slides .inner {
+        margin-left: 0;
+    }
+
+    #slide2:hover~#slides .inner {
+        margin-left: -100%;
+    }
+
+    #slide3:hover~#slides .inner {
+        margin-left: -200%;
+    }
+
+    #slide4:hover~#slides .inner {
+        margin-left: -300%;
+    }
+
+    #slides .inner {
+        transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        width: 400%;
+        line-height: 0;
+        height: 500px;
+    }
+
+    #slides .slide {
+        width: 25%;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #fff;
+    }
+
+    #slides .slide_1 {
+        background: #00171F;
+    }
+
+    #slides .slide_2 {
+        background: #003459;
+    }
+
+    #slides .slide_3 {
+        background: #007EA7;
+    }
+
+    #slides .slide_4 {
+        background: #00A8E8;
+    }
+
+    #bullets {
+        margin: 15px 0 0;
+        text-align: center;
+        display: flex;
+        gap: 8px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #bullets label {
+        display: inline-block;
+        padding: 15px;
+        background-color: #003459;
+        margin: 0 10px;
+        color: aliceblue;
+    }
+
+    #bullets label:hover {
+        background-color: #844e25;
+        color: aliceblue;
+    }
+
+    #slide1:checked~#bullets label:nth-child(1),
+    #slide2:checked~#bullets label:nth-child(2),
+    #slide3:checked~#bullets label:nth-child(3),
+    #slide4:checked~#bullets label:nth-child(4) {
+        background: rgb(186, 129, 36);
+    }
+
+    @media screen and (max-width: 900px) {
+
+        #slides {
+            max-width: calc(100% - 140px);
+            margin: 0 auto;
+        }
+    }
+</style>
+<section class="ata_slider_container">
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content">
+                            <h2>Slide 1</h2>
+                            <p>Content for Slide 1</p>
+                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="slide-content">
+                            <h2>Slide 2</h2>
+                            <p>Content for Slide 2</p>
+                        </div>
+                    </div>
+                    <div class="slide slide_3">
+                        <div class="slide-content">
+                            <h2>Slide 3</h2>
+                            <p>Content for Slide 3</p>
+                        </div>
+                    </div>
+                    <div class="slide slide_4">
+                        <div class="slide-content">
+                            <h2>Slide 4</h2>
+                            <p>Content for Slide 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bullets">
+            <label for="slide1">Titre du slide</label>
+            <label for="slide2">Titre du slide</label>
+            <label for="slide3">Titre du slide</label>
+            <label for="slide4">Titre du slide</label>
+        </div>
+    </div>
+</section>
+
+<!-- section prédefinis fin -->
+
+<!-- BEGIN switch_user_login_form_header -->
+<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="user_login_form forumline">
+        <tr>
+            <td width="50%" valign="top" align="{switch_user_login_form_header.V_ALIGN}" class="row1">
+
+                <table>
+                    <tr>
+                        <td><span class="genmed">{L_USERNAME}:</span>&nbsp;</td>
+                        <td><input class="post" type="text" size="10" name="username"/>&nbsp;</td>
+                        <td>
+                            <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} />
+                            <span class="gensmall">{L_AUTO_LOGIN}</span>&nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="genmed">{L_PASSWORD}:</span>&nbsp;</td>
+                        <td><input class="post" type="password" size="10" name="password"/>&nbsp;</td>
+                        <td>{S_HIDDEN_FIELDS}<input class="mainoption" type="submit" name="login" value="{L_LOGIN}" /></td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- BEGIN switch_social_login -->
+            <td width="10%" align="center" valign="middle" class="row1">
+                <span class="genmed fb_or">{switch_user_login_form_header.switch_social_login.L_OR}</span>
+            </td>
+            <td width="40%" class="align_gauche row1">
+                <div class="social_btn">
+                    <!-- BEGIN fb_connect -->
+                    <div class="fb-login-button"></div>
+                    <!-- END fb_connect -->
+                    <!-- BEGIN topicit_connect -->
+                    <div class="ti-connect"></div>
+                    <!-- END topicit_connect -->
+                </div>
+            </td>
+            <!-- END switch_social_login -->
+
+        </tr>
+    </table>
+</form>
+<!-- END switch_user_login_form_header -->
+
+{CHATBOX_TOP}
+{BOARD_INDEX}
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="50%" valign="top">
+			<!-- BEGIN switch_user_logged_in -->
+			<span class="gensmall"><a href="{U_MARK_READ}" class="gensmall">{L_MARK_FORUMS_READ}</a></span>
+			<!-- END switch_user_logged_in -->
+			<!-- BEGIN switch_delete_cookies -->
+			<br /><span class="gensmall"><a href="{switch_delete_cookies.U_DELETE_COOKIES}" class="gensmall" rel="nofollow">{switch_delete_cookies.L_DELETE_COOKIES}</a></span>
+			<!-- END switch_delete_cookies -->
+		</td>
+		<td width="50%" align="right">
+			<span class="gensmall">
+				<a href="{U_TODAY_ACTIVE}" class="gensmall">{L_TODAY_ACTIVE}</a><br />
+				<a href="{U_TODAY_POSTERS}" class="gensmall">{L_TODAY_POSTERS}</a><br />
+				<a href="{U_OVERALL_POSTERS}" class="gensmall">{L_OVERALL_POSTERS}</a>
+				<!-- BEGIN switch_on_index -->
+					<!-- BEGIN switch_delete_cookies -->
+					<br /><a href="{switch_on_index.switch_delete_cookies.U_DELETE_COOKIES}" class="gensmall" rel="nofollow">{switch_on_index.switch_delete_cookies.L_DELETE_COOKIES}</a>
+					<!-- END switch_delete_cookies -->
+				<!-- END switch_on_index -->
+			</span>
+		</td>
+	</tr>
+</table>
+
+<!-- BEGIN switch_user_login_form_footer -->
+<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="user_login_form forumline">
+        <tr>
+            <td width="50%" valign="top" align="right" class="row1">
+
+                <table>
+                    <tr>
+                        <td><span class="genmed">{L_USERNAME}:</span>&nbsp;</td>
+                        <td><input class="post" type="text" size="10" name="username"/>&nbsp;</td>
+                        <td>
+                            <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} />
+                            <span class="gensmall">{L_AUTO_LOGIN}</span>&nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="genmed">{L_PASSWORD}:</span>&nbsp;</td>
+                        <td><input class="post" type="password" size="10" name="password"/>&nbsp;</td>
+                        <td>{S_HIDDEN_FIELDS}<input class="mainoption" type="submit" name="login" value="{L_LOGIN}" /></td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- BEGIN switch_social_login -->
+            <td width="10%" align="center" valign="middle" class="row1">
+                <span class="genmed fb_or">{switch_user_login_form_footer.switch_social_login.L_OR}</span>
+            </td>
+            <td width="40%" class="align_gauche row1">
+                <div class="social_btn">
+                    <!-- BEGIN fb_connect -->
+                    <div class="fb-login-button"></div>
+                    <!-- END fb_connect -->
+                    <!-- BEGIN topicit_connect -->
+                    <div class="ti-connect"></div>
+                    <!-- END topicit_connect -->
+                </div>
+            </td>
+            <!-- END switch_social_login -->
+
+        </tr>
+    </table>
+</form>
+<!-- END switch_user_login_form_footer -->
+
+<!-- BEGIN disable_viewonline -->
+<table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="0">
+	<tr>
+		<td class="catHead" colspan="2" height="28">
+		<!-- BEGIN switch_viewonline_link -->
+		<span class="cattitle"><a class="cattitle" href="{U_VIEWONLINE}" rel="nofollow">{L_WHO_IS_ONLINE}</a></span>
+		<!-- END switch_viewonline_link -->
+
+		<!-- BEGIN switch_viewonline_nolink -->
+		<span class="cattitle">{L_WHO_IS_ONLINE}</span>
+		<!-- END switch_viewonline_nolink -->
+		</td>
+	</tr>
+	<tr>
+		<td class="row1" rowspan="6" align="center" valign="middle"><img src="{L_ONLINE_IMG}" id="i_whosonline" alt="{L_WHO_IS_ONLINE}" loading="lazy" /></td>
+		<td class="row1" width="100%"><span class="gensmall">{TOTAL_POSTS}<br />
+		{TOTAL_USERS}<br />
+		{NEWEST_USER}</span></td>
+	</tr>
+	<tr>
+		<td class="row1"><span class="gensmall">{TOTAL_USERS_ONLINE}<br />
+		{RECORD_USERS}<br />
+		<br />
+		{LOGGED_IN_USER_LIST}</span></td>
+	</tr>
+	{L_CONNECTED_MEMBERS}
+	{L_WHOSBIRTHDAY_TODAY}
+	{L_WHOSBIRTHDAY_WEEK}
+	<!-- BEGIN switch_group_legend -->
+	<tr>
+		<td class="row1"><span class="gensmall">{LEGEND}&nbsp;:&nbsp;{GROUP_LEGEND}</span></td>
+	</tr>
+	<!-- END switch_group_legend -->
+	<!-- BEGIN switch_chatbox_activate -->
+	<tr>
+		<td class="row1">
+			<span class="gensmall">{TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp; {CHATTERS_LIST}<br />
+				<!-- BEGIN switch_chatbox_popup -->
+				<div id="chatbox_popup"></div>
+				<script type="text/javascript">
+				//<![CDATA[
+				insertChatBoxPopup('{disable_viewonline.switch_chatbox_activate.switch_chatbox_popup.U_FRAME_CHATBOX}', '{L_CLICK_TO_JOIN_CHAT}');
+				//]]>
+				</script>
+				<!-- END switch_chatbox_popup -->
+			</span>
+		</td>
+	</tr>
+	<!-- END switch_chatbox_activate -->
+</table>
+<!-- END disable_viewonline -->
+{CHATBOX_BOTTOM}
+<br clear="all" />
+
+
+{AUTO_DST}

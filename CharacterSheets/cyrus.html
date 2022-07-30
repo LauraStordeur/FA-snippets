@@ -1,0 +1,534 @@
+<style>
+  .cyrus_container {
+    max-width: 600px;
+    width: 600px;
+    min-height: 150px;
+    background-color: rgb(52, 52, 85);
+    position: relative;
+    color: aliceblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: url(https://i.pinimg.com/564x/f8/92/fc/f892fcd415b21a94c1c7e5cd4dbb9f19.jpg);
+    background-size: 100%;
+  }
+  .cyrus_heading {
+    height: 250px;
+    width: 600px;
+    background: url(https://media.giphy.com/media/ToMjGpPcTt3go0nrrFe/giphy.gif);
+    background-size: 100%;
+    text-align: center;
+  }
+  .cyrus_heading_title {
+    font-size: 36px;
+    position: absolute;
+    top: 68px;
+    width: 600px;
+    text-align: center;
+    background: rgb(8, 75, 96);
+    background: linear-gradient(
+      0deg,
+      rgba(8, 75, 96, 1) 0%,
+      rgba(21, 167, 148, 0.48503151260504207) 100%
+    );
+    padding: 15px 0;
+  }
+  .cyrus_heading_sub_title {
+    font-size: 26px;
+    position: absolute;
+    top: 140px;
+    width: 600px;
+    margin-top: 15px;
+    display: grid;
+    place-items: center;
+  }
+  .stage {
+    animation: animateBg 2s infinite linear;
+    background-image: linear-gradient(
+      90deg,
+      #1c3c44bb,
+      #2aaa6a7a,
+      #1c3c44bb,
+      #2aaa6a7a
+    );
+    background-size: 300% 100%;
+    box-shadow: 0 3px 14px #000;
+    padding: 15px 0;
+  }
+  .stage_red {
+    animation: animateBg 2s infinite linear;
+    background-image: linear-gradient(
+      90deg,
+      #690000bb,
+      #ff51007a,
+      #690000bb,
+      #ff51007a
+    );
+    background-size: 300% 100%;
+    box-shadow: 0 3px 14px #000;
+    color: red;
+    font-size: 32px;
+    padding: 15px 0;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .box_shaddow {
+    box-shadow: 0 3px 14px #000;
+  }
+  .cyrus_content_wrapper {
+    min-height: 150px;
+    padding: 25px;
+    border-top: 9px groove rgb(40, 89, 179);
+  }
+  .cyrus_content {
+    background-color: rgba(10, 56, 56, 0.808);
+    padding: 15px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .cyrus_content i {
+    color: greenyellow;
+  }
+  .flex_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .cyrus_img_cut {
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+  .cyrus_300 {
+    width: 300px;
+  }
+  .cyrus_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 15px;
+    text-align: left;
+  }
+  .cyrus_desc strong {
+    color: aquamarine;
+  }
+  .cyrus_devider {
+    margin-top: 15px;
+    text-align: center;
+    padding: 15px;
+    font-size: 32px;
+  }
+  .postbody {
+    display: flex;
+    justify-content: center;
+  }
+
+  @keyframes animateBg {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+</style>
+<section class="cyrus_container">
+  <div class="cyrus_heading">
+    <div class="cyrus_heading_title box_shaddow">Cyrus Malphax Schrödinger</div>
+    <div class="cyrus_heading_sub_title stage">Le savant détraqué.</div>
+  </div>
+  <!-- intro -->
+  <div class="cyrus_content_wrapper">
+    <section class="cyrus_content flex_row">
+      <img
+        class="cyrus_img_cut"
+        width="250"
+        src="https://i.pinimg.com/564x/18/3b/d9/183bd9bcc476b23eca4f873012cd1394.jpg"
+        alt="cyrus_chess"
+      />
+      <div class="cyrus_300 cyrus_desc">
+        <div><strong>Age: </strong> 34 ans</div>
+        <div><strong>Sexe: </strong> Homme</div>
+        <div><strong>Race: </strong> Triton</div>
+        <br />
+        <div><strong>Faction: </strong> Évolué</div>
+        <div><strong>Métier: </strong> La science à l’extrême</div>
+        <div><strong>Capacité: </strong> Résurrection Artificielle</div>
+        <div><strong>Compétence: </strong> Mémoire parfaite</div>
+        <div><strong>Bénédiction: </strong> Enfant des Flots</div>
+        <br>
+        <div><strong>Avatar:</strong> Idia Shroud, Twisted Wonderland</div>
+      </div>
+    </section>
+  </div>
+  <!-- description -->
+  <div class="cyrus_devider stage">Description</div>
+  <section class="cyrus_content_wrapper">
+    <div class="cyrus_content">
+      <p>
+        Schizophrène, double personnalité, les deux, ou encore un jeu d’acteur
+        foldingue, on se le demande bien quand on croise la route de Cyrus. Cet
+        homme est la définition même de la folie. Un jour, il vous sera
+        serviable, amicale et se présentera à vous en tant que Cyrus, l’autre,
+        il vous toisera de son regard fou sans se rappeler de vous avoir jamais
+        vu, tout en vous insultant de l’appeler Cyrus et non Malphax. Vous, par
+        contre, vous aurez un temps d’arrêt, car vous ne doutez aucunement qu’il
+        s’agit bien de la même personne que vous avez eu le plaisir - ou
+        déplaisir - de rencontrer la veille, son physique est pour le moins
+        reconnaissable et des plus voyants. Donc, il est impossible de se
+        méprendre. Ses longs cheveux bleus qui sont en permanence parcouru d’une
+        électricité statique lorsqu’il marche sur la terre ferme. Ses yeux
+        brillants tels deux orbes dorés, ainsi que ses cernes violets accentuent
+        le délire que vous pourriez y lire. Ses lèvres bleues et ses dents de
+        requins vous font froid dans le dos chaque fois qu’il ricane de son rire
+        sardonique.
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/9f/8c/72/9f8c7276cb03f72f1456a92f8e85cd41.jpg"
+        alt="cyrus_img"
+      />
+      <p>
+        La majeure partie du temps, Cyrus porte des vêtements qui laissent
+        penser qu’il est un mage. C’est plus par convenance qu’autre chose en
+        vérité. Les mages sont plus libres de se balader partout, même si la
+        guerre est terminée depuis une bonne décennie, il reste souvent des
+        stigmates de la haine que se vouaient les deux factions. Sa tenue de
+        mage et ses cheveux flottants sont une façon de se fondre dans la masse
+        d’Éveillés sans que personne se pose trop de questions. À l'abri des
+        regards, il enfilera sa tenue préférée de savant pour s’adonner à ses
+        expériences douteuses, cherchant à comprendre la complexité de la
+        conscience humaine. Discutant allègrement de ses trouvailles avec son
+        public imaginaire, ainsi qu’avec les multiples voix que lui seul peut
+        entendre, il s’adonne à développer ses connaissances.
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/1e/22/f7/1e22f76f479b01062a7f2a9617d75f15.jpg"
+        alt="cyrus_smile"
+      />
+      <p>
+        Malphax est son alter-égo boosté à l’égocentrisme. Il vous considèrera
+        comme un idiot, qui que vous soyez. Faites bien attention, car il
+        n’hésitera pas à mettre la main sur vous pour pouvoir vous disséquer en
+        morceau pour l’une de ses futures expériences. Heureusement, cette
+        personnalité extrême ne fait surface que pendant de court moments.
+        Moments dans lesquels vous feriez mieux de prendre vos jambes à votre
+        précieux cou, si vous tenez à garder la tête sur les épaules. Par
+        contre, si l’envie de posséder un corps artificiel vous tente, vous êtes
+        entre de bonnes mains. Enfin, si vous n’êtes pas au détail prêt de
+        mourir dans des délais plus que hasardeux par corruption des chairs.
+        Notez également que vous risqueriez de ne plus tout à fait être
+        vous-même, car Malphax et Cyrus ont la fâcheuse tendance d’altérer votre
+        conscience pour la rendre plus… Plus lui. En gros, vous faites une très
+        mauvaise affaire. Lui vous dira tout le contraire, bien évidemment.
+        Donc, ne le croyez pas quand il vous dit qu’il peut vous offrir une
+        belle amélioration. Que vous ayez en face de vous Malphax ou Cyrus d’ailleurs…
+        Même si Cyrus est plus abordable et plus sympa, il n’en reste pas moins
+        dangereusement instable.
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/d1/4d/dc/d14ddc1ea606ad9d9e4b90384073b7fd.jpg"
+        alt="cyrus_img"
+      />
+    </div>
+  </section>
+  <!-- histoire -->
+  <div class="cyrus_devider stage">Moi, moi et Moi!</div>
+  <section class="cyrus_content_wrapper">
+    <div class="cyrus_content">
+      <p>
+        La science n’a aucune limite, et encore moins quand on a la capacité de
+        la combiner avec une conscience artificielle, ou conscience améliorée.
+        Je ricane d’avance en essayant de vous résumer ce que vous, simples
+        d’esprit, ne pourrez probablement jamais comprendre ! Ne me regardez pas
+        avec vos yeux pleins de rengaine, vous savez aussi bien que moi, que
+        vous ne pouvez pas vous comparer à ma personne. Quoi, je vous casse les
+        couilles avec mon arrogance ? Eh bien, sachez que j’ai toutes les
+        raisons de l’avoir, cette arrogance, pauvres ignorants !
+        <i>‘Oh oui, tellement de raisons!!!’</i> Vos gueules, les voix… Je n’ai
+        pas besoin de vous pour parler de moi ! Maintenant… où, en étais-je… AH,
+        oui… C’est vrai qu’il me faut vous expliquer en termes intelligibles et
+        brièvement qui je suis. Le grand Esprit se retourne dans sa cachette,
+        c’est moi qui vous le dit !
+        <i>‘Arrête de divaguer ! Raconte ta putain d’histoire !’</i> Oui, oui,
+        c’est bon… Pas la peine de vous exciter comme ça…
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/15/d3/70/15d370cfd745b23972838ea13fb7f5cb.jpg"
+        alt="cyrus_img"
+      />
+      <p>
+        Je disais donc… Que je fais partie de ces grands génies de cette époque,
+        qui hante les cauchemars de vos gosses la nuit.
+        <i
+          >‘Il faut peut-être que tu leur indiques ton nom, nan? C’est un peu
+          comme ça qu’on se présente en général…’</i
+        >
+        Je bats l’air de ma main en grimaçant. Qu’en savez-vous de toute façon !
+        Il n’y a que moi qui vous entende ! Alors, fermez là ! Les simplets
+        attendent que je leur raconte mes exploits !
+        <i>‘Tu veux dire, ton seul exploit…’</i> Mais bordel, je vous ai dit de
+        la boucler ! Ils vont finir par croire que je suis fou !
+      </p>
+      <p>
+        <i>‘Nan, mais c’est déjà le cas, t’as vu leurs regards paumés ?’</i> Ne
+        dites pas de conneries… Désolé de cet interlude, je reprends donc.
+        Certains me connaissent sous le nom de Malphax, le savant fou, il faut
+        dire que c’est à connotation plus… maléfique que Cyrus. Ma mère a dû se
+        douter que je tournerais mal pour me donner un deuxième nom pareil.
+        Enfin, loin de moi l’idée de m’en plaindre. Je ris d’un rire sadique en
+        basculant la tête en arrière. Elle n’aurait pas pu trouver meilleur
+        nom ! Non, cela ne vous fait pas rire ? Dommage, vous ne savez pas ce
+        que vous ratez. Vous me dites que vous voulez en savoir plus sur mon
+        fameux exploit ? Hahahaha ! Bien sûr que vous désirez en savoir plus !
+      </p>
+      <p>
+        Voyez-vous, la vie, la mort… ne sont que des concepts vagues pour de
+        pauvres ignares comme vous. Moi, cela me parle, cela me fait vibrer
+        d’une folie dingue !
+        <i>‘Tu vois que t’es pas tout juste dans ta tête ?’</i> Ugh…
+        taisez-vous, sinon nous allons y passer la nuit… En parlant de nuit,
+        j’espère que vous gardez toujours une petite lanterne dans le recoin de
+        votre chambre pour chasser les monstres qui croulent sous votre lit.
+        <i>'Arrête, tu vas leur foutre les jetons’ </i> Mais non, voyons, je ne
+        suis qu’un réaliste ! Tout le monde sait qu'il y a des monstres sous les
+        lits ! <i>‘Nan, mais tu divagues encore Malphax…'</i> Juste… Pour faire
+        court, car je commence à voir dans vos mirettes éberluées, que je suis
+        en train de vous perdre.
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/c3/61/d1/c361d10a2c44a2d13a5d0ca70f6b95f9.jpg"
+        alt="cyrus_img"
+      />
+      <p>
+        Il fut un temps, où j’avais un frère. Son nom ? Ah… Je… Je crois que
+        c’était un truc du genre Carrys, ou Clarice… Non, c’est un nom de fille
+        ça, ce ne peut pas être ça… Enfin, bref, vous ne retiendrez pas son nom
+        de toute façon non plus. Passons ! <i> ‘C’était Isaac…’ </i>Oui ! Tout à
+        fait, c’est ce que j’ai dit, non ? Vous allez pas passer votre vie à me
+        rabâcher les oreilles quand même ! Je ne vais vraiment jamais arriver à
+        terminer mon récit à force ! J’ai d’autres choses à foutre que de
+        m’expliquer à une bande de plouc aussi intelligente que les pieds d’un
+        troll ! Mon frère, donc… Jeune et beau, avec ses belles nageoires
+        brillantes, ses beaux cheveux vert foncé, le vrai fils à sa maman…
+        Attendez, il faut que je vomisse mes tripes… BLEEARGH… Haa… désolé, ça
+        me le fait à chaque fois que j’en parle.
+      </p>
+      <p>
+        Toujours est-il que ce mioche était la star de notre famille, tandis que
+        moi, pauvre Malphax, enfin Cyrus, car je n’existais pas encore à cette
+        époque, était relégué au rang secondaire. Vous savez, l'aîné de la
+        fratrie qui se ramasse tous les pots cassés à la gueule, car il est pas
+        aussi parfait que bébé Cyril ! <i>'Isaac…’</i> Vous m’écoutez quand je
+        parle ?! C’est ce que j’ai dit, merde !
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/0f/ef/2c/0fef2c97b27f5f77cdfe9e22aa89bf2b.jpg"
+        alt="cyrus_img"
+      />
+      <p>
+        J’en étais où déjà… Ha, oui… cette belle époque… Donc, le mioche
+        insupportable… Oui… Il a fini par grandir en un mioche encore plus
+        insupportable, toujours poli et attentionné. Tandis que moi, pauvre
+        Cyrus, n’arrivait jamais à plaire ! Tout ce que je faisais n’était
+        jamais assez bien pour eux ! Ces ingrats ! Je crois… que c’est à cette
+        période que j’ai commencé à voir le jour… Cyrus se sentait tellement
+        seul, le pauvre. J’ai dû trouver une solution à sa solitude déprimante.
+        Il fallait simplement que je remplace ce petit frère par une meilleure
+        version, une version à mon image ! Impossible, vous dites ? Mais non
+        voyons. Non, non, ne me flattez pas pour mon génie incommensurable !
+        Enfin, ne vous retenez pas non plus si vous y tenez tant que ça, hein !
+      </p>
+      <p>
+        Il y a certains avantages à être un triton ! On est d’un intérêt sans
+        égal pour certains scientifiques. Surtout lorsqu’une guerre éclate à la
+        surface et qu’ils tentent d’éradiquer la magie de leurs terres. Ah, oui,
+        j’ai oublié de vous préciser que ma génialissime personnalité s’est
+        déclaré vers la fin de la guerre Technomagique. Environ une dizaine
+        d’années avant qu’elle se termine pour de bon. Bref, je m’égare à
+        nouveau. J’ai pas besoin de vous compter cette guerre, vous en entendez
+        assez parler sans que je vous rappelle cette belle époque. Quoi, c’était
+        une boucherie ? Oui… Maintenant que vous le dites, c’est vrai que
+        c’était assez sanglant. Toujours est-il que pour moi, c’était du pain
+        béni. Nous tritons, avons toujours été fascinés par la technologie sans
+        pour autant oser s’en approcher. Soi-disant pour garder une distance de
+        sécurité… Si seulement ils savaient à quel point la technologie peut
+        être une drogue dure… Ils se shooteraient matin et soir. Par contre, ne
+        leur dites pas que je les trouve pathétiques, j’aimerais pas me les
+        mettre à dos en ce moment. Revenons-en à nos poissons ! Pendant que ces
+        'peaux sèches’ s'obnubilaient à s’anéantir, moi, le génie, je me suis
+        mis en quête du savoir qu’il me fallait pour mettre en route mon
+        formidable plan. J’avais eu écho de l’existence de savants fous à
+        Exalos, qui en ces temps de guerre avaient le loisir de s’adonner à des
+        pratiques alors interdites, dans le seul but de gagner du terrain sur
+        les Éveillés. La cité Technologique tolérait leur existence tant qu’ils
+        se consacraient à faire cesser cette guerre. Aubaine pour un génie comme
+        moi, qui avait en tête d’en trouver un suffisamment fou pour m’apprendre
+        ce que je devais savoir. J’avais réussi à mettre la main sur de vieux
+        manuscrits d’avant-guerre parlant des bases de la science artificielle,
+        mais les textes n’étaient jamais complets, bon nombre de pages
+        manquaient. Donc, il me fallait un maître digne de m’enseigner la
+        matière.
+      </p>
+      <p>
+        Un autre avantage d’être un triton, c’est qu’on ne manque jamais de
+        bouffe ! L’océan regorge de poissons et d’algues savoureuses ! Parfait
+        pour les longs voyages. <i>‘Tu peux pas abréger un peu là?’</i> Euh,
+        non ? J’arrive justement au sujet palpitant, laissez-moi dans mon trip !
+        C’est mon histoire, je raconte autant que je le veux, d’abord !
+        <i>‘Nan, mais t’avais dit que t’avais d’autres trucs à faire…’</i>
+        Ouais, ouais, ça peut attendre un peu. Rien de dramatique.
+        <i>‘Si tu le dis…’</i>
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/cd/0d/91/cd0d91de2e98ee5542b8c4368d1bd8dc.jpg"
+        alt="cyrus_img"
+      />
+      <p>
+        Naaah, c’est bon. Je reprends ! J’ai de ce fait pris la décision de
+        sortir du cocon familial à Tenoch, je devais avoir 15 ans, il me semble?
+        <i> ‘Ouais… il te semble bien’</i> Voilà, parfait. J’ai nagé pendant
+        plusieurs jours pour rejoindre un rivage, tout près de la frontière
+        d’Exalos. Je suis resté durant des semaines entières à observer la
+        surface, sans parvenir à me motiver à franchir le cap pour sortir de
+        l’eau. Il faut dire que je n’avais jamais mis pied à terre et les
+        histoires qu’on raconte aux enfants tritons ne sont pas très joyeuses.
+        Comme escompté, ce n’était pas une partie de plaisir, quand on a pas de
+        jambe depuis la naissance, apprendre à s’en servir n’est pas chose
+        évidente ! Donc, je vous interdis de vous moquer de moi, pauvres rustres
+        sans cervelles ! Heureusement que j’avais prévu le coup en emportant une
+        tunique dans mon sac de voyage, sinon, j’aurais été dans de beaux
+        draps ! Bon, certes, la tunique était bien trop grande pour mon corps de
+        rêve, mais je m’en suis contenté. Trouver ce qu’on cherche, quand on ne
+        sait pas où chercher… ça prend une plombe. Mais quand on est aussi
+        intelligent que moi, on se démerde plutôt bien. La première chose à
+        faire, c’est de trouver un village. La suite est assez simple, suivre
+        les rumeurs des environs jusqu’à attirer l’attention d’un scientifique.
+        C’est pas compliqué lorsque votre physique hurle au monde entier, qu’il
+        n’est pas humain. Je n’ai donc pas dû chercher si longtemps que ça avant
+        qu’un de ces savants maboul se rapprochent dans une ruelle sombre pour
+        m’interpeller.
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/aa/05/64/aa0564f9e2ec8878c1e684537560a0ac.jpg"
+        alt="cyrus_img"
+      />
+      <p>
+        Le deal ? J’ai accepté qu’il fasse des expériences sur mon corps en
+        échange de son savoir sur la science artificielle. Fantastique, n’est-ce
+        pas !? J’en jubilais tellement j’avais hâte de découvrir mes limites
+        intellectuelles. J’ai tiré quelques conclusions de cette période de ma
+        vie, le corps humain est médiocre tout au plus, la science n’a pas de
+        limites, et pour finir, sortir de la cave secrète de cet homme était une
+        vraie plaie ! Quand j’ai obtenu ce dont j’avais besoin pour commencer à
+        faire mes expériences, il n’a pas voulu me laisser partir, bien entendu.
+        Enfin, à sa place, j’aurais fait pareille ! Je suis un spécimen en or !
+        Il m’a fallu sept ans pour arriver à m’extirper de ces griffes. Il
+        n’avait pas prévu que je puisse être plus fourbe que lui, alors il s’est
+        fait avoir à son propre jeu et baigne probablement encore dans son bocal
+        vaseux qui m’a servi d’aquarium pendant toutes ces années. J’ai profité
+        durant deux années supplémentaires de son laboratoire secret pour me
+        confectionner une console technologie résistante à l’eau, nécessaire
+        pour accomplir n’importe quelle tâche de transfert de conscience.
+        J’avais donc 24 ans au compteur lorsque j’ai quitté cet endroit. La
+        guerre venait également de toucher à sa fin, me laissant la possibilité
+        d’obtenir une multitude de matériels technologiques pour me construire
+        une caverne sous-marine non loin de Tenoch. Ma famille ? Hein ? Quoi ?
+        Ah, oui… Je leur ai bien évidemment vendu le plus beau mensonge des
+        fonds marins. Enfin, il y a une part de vérité quand même dedans, mais
+        je leur ai raconté que je me suis fait enlever par un savant fou en
+        quête de gloire éternelle en inventant une nouvelle tech qui gagnerait
+        la guerre. Il faut dire que j’ai eu le temps de mijoter ce que j’allais
+        leur raconter en rentrant. C’est passé comme une lettre au Relai
+        Technique !
+      </p>
+      <p>
+        Quand j’ai eu fini de rassembler tout ce dont j’avais besoin, il m’a
+        juste suffi de tuer mon frère dans son sommeil pour ensuite garder
+        quelques morceaux, que j’ai minutieusement ajoutés plus tard comme
+        touche finale à son nouveau corps artificiel. En vrai, je n’ai pas gardé
+        grand-chose, car mis à part son joli visage et son cerveau, tout était à
+        jeter.
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/736x/03/71/15/037115bd4d12b7ed74b282e4901a0cad.jpg"
+        alt="cyrus_img"
+      />
+      <p>
+        Vous ne comprenez pas comment j’ai pu faire un acte pareil ? On ne tue
+        pas un membre de sa famille pour le remplacer par un Artificiel ? Ha….
+        Vous voyez que vous n’êtes que des simples d’esprits ! C’est quoi un
+        Artificiel ? Il faut vraiment que je vous l’explique ? Vous êtes pire
+        que ce que je croyais… Vraiment, vous me décevez… Un Artificiel, c’est
+        un être composé de pièces mécaniques principalement, mais avec le
+        cerveau physique d’un être vivant. Oui, oui, je sais ce que vous allez
+        me dire, je suis un génie. Merci, c’est trop gentil. Maintenant, rangez
+        vos fleurs et soyez sage pour la suite.
+      </p>
+      <p>
+        Bon, je dois vous avouer un truc. C’est que comme vous, mon peuple ne
+        vois pas le meurtre d’un bon œil… Mais j’avais tout prévu, ne vous
+        inquiétez pas ! Ma caverne était prête et j’ai emporté les morceaux de
+        son corps dans un bocal conçu pour ce genre d’éléments. J’ai donc nagé
+        aussi vite que j’ai pu, en veillant maladivement que je ne sois pas
+        suivi, vers mon labo secret.
+      </p>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/38/56/a4/3856a4693ab5e205ece47f07a841c796.jpg"
+        alt="cyrus_img"
+      />
+      <p>
+        Il était si beau avec ses cheveux bleus, ses yeux dorés… Quoi ? Il me
+        ressemble, vous dites ? Bien évidemment ! Vous avez cru que j’allais
+        créer une mocheté sans nom ? Laissez-moi rire un instant. Hahaha, oui,
+        voilà, je me sens mieux. Il était absolument PARFAIT ! Je l’ai
+        rebaptisé, car le nom que mes parents lui ont octroyé était absolument
+        naze. RA-IN, ou Rain si vous insistez… J’avais enfin le frère dont j’ai
+        toujours rêvé ! Vous ne savez pas à quel point il me rendait heureux !
+        Il est rapidement devenu indispensable à mon existence, il m’aidait dans
+        mes recherches et passait son temps à me suivre partout en appréciant
+        tout ce que je faisais pour lui. Il ne se posait jamais de question
+        quant à son corps bionique et m’aimait d’un amour inconditionnel.
+        Seulement… ce que je n’avais pas prévu, était qu’il puisse engendrer la
+        corruption de la chair… Son corps si parfait à commencer par de légers
+        dysfonctionnements, puis cela c’est aggravé considérablement jusqu’à
+        l’immobilisé entièrement. Mon rêve s’est écroulé tellement vite… J’étais
+        anéanti. J’ai essayé en vain de lui construire de nouveaux corps, mais
+        systématiquement, il finissait par succomber à la pourriture bionique.
+        Mon savoir n’était pas suffisant… Mais rien ne dit que je ne finirai pas
+        par réussir !
+      </p>
+      <p>
+        Aujourd’hui, je ne sais même plus combien de fois, j'ai tenté
+        l’impossible. Je n’abandonnerai jamais, la perfection est quelque part
+        dans ce monde, et je la trouverai. Je trouverai l’équilibre parfait pour
+        le ramener à la vie.
+        <i>‘C’est bon, on peut sortir les mouchoirs ?’</i> Non, mais sérieux,
+        j’allais justement finir sur une touche magistrale ! C’était vraiment
+        nécessaire de vous manifester maintenant, là?
+        <i
+          >'Bah, oui ? Tu étais si absorbé par ton récit, que t’as un message
+          d’erreur sur ton écran...’</i
+        >
+        Quoi?! Aaarghhh!! J’y étais presque cette fois!!!! Foutez tous le camp !
+        J’ai assez perdu de temps pour vos jolis yeux de poissons rouges !
+      </p>
+      <div class="stage_red">SYSTEM ERROR</div>
+      <img
+        width="520"
+        src="https://i.pinimg.com/564x/de/44/29/de4429d41048f6ef65408d9b48e95556.jpg"
+        alt="cyrus_img"
+      />
+    </div>
+
+  </section>
+  <div class="stage_red">Terminate program</div>
+</section>
