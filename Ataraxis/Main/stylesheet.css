@@ -19,11 +19,11 @@ body {
   height: 100vh;
   background-color: #f07f1ccc;
   color: #231342;
-  padding: 0 12px;
+  padding: 0 5px;
   max-width: 150px;
 }
 .ata_nav_container > div > a {
-  padding: 10px;
+  padding: 5px;
   margin: 10px 0;
   font-size: medium;
   background-color: #4a240a;
@@ -52,7 +52,7 @@ body {
 .ata_main_content {
   width: calc(100vw - 300px);
   max-width: 1200px;
-  padding: 70px;
+  padding: 100px;
 }
 .ata_menu_item {
   width: 40px;
@@ -79,7 +79,7 @@ body {
 
 .ata_title_container > h2 {
   width: 100%;
-  font-size: 3vh;
+  font-size: 1.8rem;
 }
 
 /* Section cartes catégories */
@@ -169,7 +169,7 @@ body {
   justify-content: center;
   bottom: 0;
   color: rgb(255, 249, 227);
-  font-size: 2vw;
+  font-size: 2rem;
   background-color: rgba(0, 0, 0, 0.61);
   text-transform: uppercase;
 }
@@ -544,13 +544,13 @@ body {
   background: #022739;
   margin: 25px 0;
   color: orange;
-  padding: 15px;
+  padding: 5px;
 }
 .ata_nav > a {
   color: aliceblue;
 }
 .ata_nav_item {
-  padding: 0 15px;
+  padding: 0 10px;
   color: aliceblue;
 }
 a.nav {
@@ -600,7 +600,8 @@ a.nav {
     rgba(14, 116, 103, 1) 100%
   );
   max-width: 1200px;
-  height: 600px;
+  height: 80vh;
+  max-height: 600px;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -628,6 +629,7 @@ a.nav {
   flex-direction: column;
   color: aliceblue;
   padding: 15px;
+  max-height: 65vh;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
@@ -647,7 +649,7 @@ a.nav {
 .ata_predef_titre {
   margin-top: 10px;
   padding: 15px;
-  font-size: 24px;
+  font-size: 1.2rem;
   background-color: #ffa34f;
   border-radius: 5px;
   width: 100%;
@@ -656,8 +658,9 @@ a.nav {
   -moz-box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.75);
 }
 .ata_predef_resume {
-  padding: 20px 15px;
-  font-size: 18px;
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: justify;
 }
 .free {
   background-color: rgba(0, 128, 0, 0.438);
@@ -681,6 +684,7 @@ a.nav {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  font-size: 0.8rem;
 }
 .ata_discover_button {
   background-color: #095245;
@@ -720,7 +724,8 @@ a.nav {
 }
 
 .slide_viewer {
-  height: 600px;
+  height: 80vh;
+  max-height: 600px;
   overflow: hidden;
   position: relative;
 }
@@ -753,7 +758,7 @@ a.nav {
 a.slide_btn {
   color: #474544;
   font-size: 42px;
-  margin: 0 0.175em;
+  margin: 0 0.175rem;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -770,7 +775,7 @@ a.slide_btn {
 .directional_nav {
   max-width: 1200px;
   position: relative;
-  top: -540px;
+
 }
 
 .previous_btn {
@@ -905,7 +910,7 @@ a.slide_btn {
     height: auto;
     background-color: #ff9b3d;
     color: #231342;
-    padding: 12px;
+    padding: 5px;
     max-width: 100%;
   }
   .ata_nav_container > div {
@@ -920,49 +925,8 @@ a.slide_btn {
   }
 }
 @media only screen and (max-width: 1200px) {
-  .slider {
-    height: 800px;
-  }
-  .ata_carte_predef {
-    height: 750px;
-  }
-  .ata_predef_resume {
-    font-size: 0.9rem;
-    padding: 10px 10px;
-  }
-  .ata_predef_titre {
-    font-size: 1rem;
-  }
-  .slide_viewer {
-    height: 750px;
-  }
   .ata_main_content {
     width: calc(100% - 100px);
-  }
-  .directional_nav {
-    top: -721px;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .slider {
-    height: 750px;
-  }
-  .ata_carte_predef {
-    height: 750px;
-  }
-  .ata_predef_resume {
-    font-size: 1rem;
-    padding: 10px 10px;
-  }
-  .ata_predef_titre {
-    font-size: 1.5rem;
-  }
-  .slide_viewer {
-    height: 750px;
-  }
-  .ata_main_content {
-    width: calc(100% - 150px);
   }
 }
 
@@ -973,8 +937,8 @@ a.slide_btn {
   .next_btn {
     right: 50px;
   }
-  .slider {
-    display: none;
+  .ata_predef_resume {
+    overflow: auto;
+    min-height: 200px;
   }
-
 }
