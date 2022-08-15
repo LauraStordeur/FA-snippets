@@ -1,102 +1,620 @@
 <style>
+  body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    /* width of the entire scrollbar */
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(18, 53, 120);
+    /* color of the tracking area */
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: aliceblue;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid aliceblue;
+    /* creates padding around scroll thumb */
+  }
+</style>
+
+<style>
+  body {
+    height: 3000px;
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/003/607/846/large/sy-37-252.jpg?1475546556);
+    background-size: 100%;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .ata_pa_container {
     width: 100%;
-    max-width: 1200px;
-    background-color: rgb(95, 141, 160);
+    background: rgb(63, 149, 251);
+    background: radial-gradient(
+      circle,
+      rgba(63, 149, 251, 1) 0%,
+      rgba(18, 53, 120, 1) 100%
+    );
     min-height: 500px;
     display: flex;
     flex-direction: column;
     position: relative;
-  }
-  .ata_pa_titre {
-    padding: 15px;
-    text-align: center;
-    background-color: rgb(13, 71, 122);
-  }
-  .ata_pa_nav {
-    position: absolute;
-    top: -5px;
-    right: 15px;
-    width: 250px;
-    min-height: 300px;
+    color: aliceblue;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
-  .ata_pa_nav_arrow {
-    background-color: rgb(90, 0, 0);
-    height: 150px;
-    -webkit-clip-path: polygon(50% 28%, 100% 61%, 100% 0, 0 0, 0 60%);
-    clip-path: polygon(50% 28%, 100% 61%, 100% 0, 0 0, 0 60%);
-    background: rgb(0, 31, 32);
-    background: rgb(196, 85, 0);
-    background: linear-gradient(
-      0deg,
-      rgba(196, 85, 0, 1) 0%,
-      rgba(62, 33, 0, 1) 100%
-    );
-  }
-  .ata_pa_nav_items {
-    background-color: rgb(0, 124, 124);
-    min-height: 250px;
-    padding: 10px;
-    background: rgb(0, 31, 32);
-    background: rgb(196, 85, 0);
-    background: linear-gradient(
-      0deg,
-      rgba(196, 85, 0, 1) 0%,
-      rgba(62, 33, 0, 1) 100%
-    );
-  }
-  .ata_pa_nav_items a {
-    display: block;
-    padding: 10px;
-    color: aliceblue;
+  .ata_pa_titre {
+    padding: 20px 15px;
+    font-size: 1.4rem;
     text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    border-bottom: 2px double aliceblue;
-  }
-  .ata_pa_nav_items a:hover {
-    transform: scale(1.1) translateX(5px);
     font-weight: bold;
-    background-color: rgb(165, 97, 42);
-    box-shadow: 1px 10px 12px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 1px 10px 12px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 10px 12px 0px rgba(0, 0, 0, 0.75);
-  }
-  .ata_pa_nav_head {
-    text-transform: uppercase;
     text-align: center;
     color: aliceblue;
-    font-weight: bolder;
-    padding: 10px;
-    font-size: larger;
-    background: rgb(196, 85, 0);
-    background: linear-gradient(
-      0deg,
-      rgba(196, 85, 0, 1) 0%,
-      rgba(62, 33, 0, 1) 100%
+    margin-bottom: 15px;
+    background: rgba(18, 53, 120, 1);
+    background: radial-gradient(
+      circle,
+      rgba(63, 139, 251, 1) 0%,
+      rgba(30, 18, 120, 1) 100%
     );
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  .ata_box_shadow {
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
+  }
+  .ata_pa_contenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 8px 15px;
+  }
+  .ata_pa_contenu > div {
+    min-height: 100px;
+    min-width: 150px;
+    position: relative;
+  }
+  .ata_pa_contenu > div .titre {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+    text-indent: 15px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.568);
+    font-weight: 600;
+  }
+  .ata_pa_block {
+    background-color: rgba(23, 31, 105, 0.623);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ata_pa_sub_block {
+    background-color: rgba(10, 15, 58, 0.767);
+    position: relative;
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 200px;
+    overflow: hidden;
+    flex-grow: 1;
+    filter: grayscale(100%);
+  }
+  .ata_pa_sub_block:hover {
+    filter: grayscale(0%);
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
+  }
+  .ata_small {
+    flex-grow: 1;
+  }
+  .ata_large {
+    flex-grow: 2;
+  }
+  .ata_top_img {
+    max-width: 200px;
+  }
+  .ata_pa_contenu a {
+    color: aliceblue;
+    text-decoration: none;
+  }
+
+  .ata_pa_slider {
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    border: 5px solid rgba(21, 7, 83, 0.63);
+    margin-bottom: 40px;
+  }
+  .ata_pa_slides {
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+    animation: slideCard 20s ease-in infinite;
+    position: relative;
+  }
+  .ata_pa_slide img {
+    width: 200px;
+    height: 100%;
+  }
+  .ata_admin_link {
+    position: absolute;
+    padding: 15px 0;
+    text-align: center;
+    top: 70%;
+    background-color: rgba(214, 130, 20, 0.658);
+    font-weight: bold;
+    width: 200px;
+  }
+  .ata_admin_link:hover {
+    background-color: rgb(233, 118, 23);
+  }
+  .ata_context_block {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 8px;
+  }
+  .ata_context_element {
+    background-color: rgb(46, 105, 156);
+    flex-grow: 1;
+    max-height: 50px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.5s, filter 0.5s;
+    filter: blur(1.5px) saturate(65%);
+  }
+  .ata_context_element:hover {
+    filter: blur(0) saturate(100%);
+  }
+  .ata_context_desc {
+    opacity: 0;
+    display: none;
+    transition: opacity 2s, display 2s;
+    backdrop-filter: blur(3px);
+  }
+  .ata_active .ata_context_desc {
+    background-color: rgba(0, 0, 0, 0.637);
+    color: aliceblue;
+    display: block;
+    position: absolute;
+    opacity: 1;
+    margin: 15px;
+    padding: 10px;
+    width: calc(100% - 50px);
+  }
+  .ata_context_desc > p {
+    text-align: justify;
+    padding-right: 20px;
+  }
+  .ata_context_desc > a {
+    float: right;
+    margin: 15px;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: rgb(175, 88, 16);
+    font-size: 0.8rem;
+  }
+  .ata_context_desc > a:hover {
+    background-color: rgb(255, 123, 0);
+  }
+  .ata_active {
+    background-color: aqua;
+    max-height: 100%;
+    filter: blur(0) saturate(100%);
+  }
+  #context_veskarien {
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c4609d4f-0c83-4a40-b49a-732046e517ad/d9y51js-9ebd38cf-d7eb-4a73-8cb9-790992e0273a.jpg/v1/fill/w_1024,h_544,q_75,strp/stfk_art_by_y_mir_d9y51js-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQ0IiwicGF0aCI6IlwvZlwvYzQ2MDlkNGYtMGM4My00YTQwLWI0OWEtNzMyMDQ2ZTUxN2FkXC9kOXk1MWpzLTllYmQzOGNmLWQ3ZWItNGE3My04Y2I5LTc5MDk5MmUwMjczYS5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.jdbMxBBKotmduk4IaaWsdRV_oOJvO9-qphShf8_HqLo);
+    background-size: cover;
+  }
+  #context_ataraxien {
+    background: url(https://i.pinimg.com/564x/af/77/cb/af77cb94bf4acf4c619993f324a80d23.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  #important_posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    max-height: 160px;
+    margin-bottom: 40px;
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+  #important_posts > a {
+    padding: 8px;
+    background-color: rgb(175, 88, 16);
+    text-align: center;
+  }
+  #important_posts > a:hover {
+    background-color: rgb(255, 123, 0);
+  }
+  .liens_votes {
+    height: 125px;
+    margin-bottom: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .lien_vote {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    position: relative;
+  }
+  .lien_vote > img {
+    transition: transform 0.7s;
+    height: 100px;
+  }
+  .lien_vote:hover > img {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+  }
+  #partenaires {
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    flex-grow: 1;
+    padding-bottom: 40px;
+  }
+  #partenaires > a > img {
+    height: 125px;
+    filter: grayscale(100%);
+    transition: filter 1s;
+    transition-timing-function: ease-out;
+  }
+  #partenaires > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    background: url(https://i.pinimg.com/564x/43/83/29/43832988ef6371afb18afdab36db485d.jpg);
+    background-position: center;
+    background-size: cover;
+    align-items: flex-start;
+  }
+  #partenaires > div > p {
+    text-align: center;
+    background-color: rgba(175, 87, 16, 0.774);
+    backdrop-filter: blur(5px);
+    flex-grow: 1;
+    margin: 0;
+    padding: 8px 0;
+    font-weight: bold;
+  }
+  #partenaires > a > img:hover {
+    filter: grayscale(0%);
+  }
+
+  .lien_vote:hover {
+    filter: sepia(84%) brightness(106%) hue-rotate(168deg) saturate(311%);
+    -webkit-filter: sepia(84%) brightness(106%) hue-rotate(168deg)
+      saturate(311%);
+    -moz-filter: sepia(84%) brightness(106%) hue-rotate(168deg) saturate(311%);
+  }
+
+  @keyframes slideCard {
+    0% {
+      margin-left: 0;
+    }
+    21% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: -100%;
+    }
+    46% {
+      margin-left: -100%;
+    }
+    50% {
+      margin-left: -200%;
+    }
+    71% {
+      margin-left: -200%;
+    }
+    75% {
+      margin-left: -300%;
+    }
+    95% {
+      margin-left: -300%;
+    }
+    100% {
+      margin-left: 0;
+    }
   }
 </style>
+<script type="text/javascript">
+  //<![CDATA[
+  /** Ajouter la liste de titre de sujet importants ici. **/
+  var sujetsImportants = ["Recensement", "News"];
+  /** Ajouter la liste d'Admins et Modérateurs ici. Il y a un nombre de 4 cartes à respecter,
+   * Il faut donc doubler certaines cartes si on a pas le nombre d'admins réquis,
+   * ou avoir une carte défault pour les possitions ouvertes.
+   * Si nous avons plus d'admins que ça, on devra modifié le code un peu. **/
+  var listeAdmins = [
+    {
+      nom: "XXX",
+      img: "https://i.pinimg.com/564x/47/c8/dd/47c8dd998140ce4c93a6f82b3812f804.jpg",
+      lien: "",
+    },
+    {
+      nom: "ZZZ",
+      img: "https://i.pinimg.com/564x/d7/60/af/d760af6e1b09e05f5a63be8091814ec7.jpg",
+      lien: "",
+    },
+    {
+      nom: "XXX",
+      img: "https://i.pinimg.com/564x/47/c8/dd/47c8dd998140ce4c93a6f82b3812f804.jpg",
+      lien: "",
+    },
+    {
+      nom: "ZZZ",
+      img: "https://i.pinimg.com/564x/d7/60/af/d760af6e1b09e05f5a63be8091814ec7.jpg",
+      lien: "",
+    },
+  ];
+  /** Ajouter la liste de top-sites ici. Images carées seulement !**/
+  var listeTopSites = [
+    {
+      nom: "Top50",
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F91-913639_fire-flame-power-magic-orange-circle-ring-ringoffire.png&f=1&nofb=1",
+      lien: "",
+    },
+    {
+      nom: "Top50",
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F91-913639_fire-flame-power-magic-orange-circle-ring-ringoffire.png&f=1&nofb=1",
+      lien: "",
+    },
+    {
+      nom: "Top50",
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F91-913639_fire-flame-power-magic-orange-circle-ring-ringoffire.png&f=1&nofb=1",
+      lien: "",
+    },
+    {
+      nom: "Top50",
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F91-913639_fire-flame-power-magic-orange-circle-ring-ringoffire.png&f=1&nofb=1",
+      lien: "",
+    },
+  ];
+  /** Liste des partenaires. format de chaque partenaire :
+   *  { nom: "", lien: "", img: ""}
+   *  **/
+  var listePartenaires = [];
 
-<section class="ata_pa_container">
-  <div class="ata_pa_nav">
-    <div class="ata_pa_nav_head">Liens utils</div>
-    <div class="ata_pa_nav_items">
-      <a href="">Règlement</a>
-      <a href="">Guide</a>
-      <a href="">Lore</a>
-      <a href="">Factions</a>
-      <a href="">Races</a>
-      <a href="">Avatars</a>
-      <a href="">Lien 2</a>
-      <a href="">Lien 2</a>
-      <a href="">Lien 2</a>
-      <a href="">Lien 2</a>
-      <a href="">Lien 2</a>
-      <a href="">Lien 2</a>
-    </div>
-    <div class="ata_pa_nav_arrow"></div>
-  </div>
-  <div class="ata_pa_titre">Titre</div>
-</section>
+  /** Avatar et lien profil du meilleur voteur du mois, images carés seulements **/
+  var topVoteur = {
+    avatar:
+      "https://i.pinimg.com/564x/20/41/aa/2041aaba4e323a4d2025c96a025dff43.jpg",
+    lien: "",
+  };
+  /** Avatar et lien profil du meilleur roliste du mois, images carés seulements! **/
+  var topRoliste = {
+    avatar:
+      "https://i.pinimg.com/564x/96/d5/04/96d50459a0422ae6f297a5b1e0635ca4.jpg",
+    lien: "",
+  };
+  /** Lien vers les pages où le context est décrit. Le bouton "découvrir" mène vers le sujet du context actif dans l'info-box
+   *  Le format de lien FA est encouragé.
+   *  Exemples:
+   *    /f16-yubai-continent-desertique?tt=1
+   *    /t170-recensement?tt=1
+   *  **/
+  var lienContexts = {
+    ataraxien: "",
+    veskarien: "",
+  };
+
+  /** Descriotion des context respectif. Une moyenne de 100-150 mots est recomendée **/
+  var contextDescription = {
+    ataraxien: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    veskarien: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+  };
+  //]]>
+</script>
+<body>
+  <div class="ata_pa_titre">Bienvenue Voyageur !</div>
+  <main class="ata_pa_container ata_box_shadow">
+    <section class="ata_pa_contenu">
+      <div class="ata_pa_block">
+        <div class="ata_pa_slider">
+          <div id="ata_admin_slide" class="ata_pa_slides"></div>
+        </div>
+        <div class="titre">Nos Admins</div>
+      </div>
+      <div class="ata_pa_block ata_large">
+        <section class="ata_context_block">
+          <div
+            onclick="toggleContext('context_veskarien')"
+            id="context_veskarien"
+            class="ata_context_element ata_active"
+          >
+            <div class="titre">Context Veskarien</div>
+            <div class="ata_context_desc">
+              <p id="veskarien_desc">du text</p>
+              <a id="ata_lien_context_veskarien" href="">Découvrir</a>
+            </div>
+          </div>
+          <div
+            id="context_ataraxien"
+            onclick="toggleContext('context_ataraxien')"
+            class="ata_context_element"
+          >
+            <div class="titre">Context Ataraxien</div>
+            <div class="ata_context_desc">
+              <p id="ataraxien_desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a id="ata_lien_context_ataraxien" href="">Découvrir</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="ata_pa_block">
+        <div class="ata_pa_sub_block">
+          <a id="roliste_link" href="_blank">
+            <div id="top_roliste"></div>
+            <div class="titre">Top Roliste</div></a
+          >
+        </div>
+        <div class="ata_pa_sub_block">
+          <a id="voteur_link" href="_blank">
+            <div id="top_voteur"></div>
+            <div class="titre">Top Voteur</div></a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="ata_pa_contenu">
+      <div class="ata_pa_block">
+        <div id="block_top_sites" class="liens_votes">
+          Nous n'avons pas encore de top sites.
+        </div>
+        <div class="titre">N'oubliez pas de voter !</div>
+      </div>
+      <div class="ata_pa_block ata_small">
+        <div id="important_posts">
+          <a href="_blank">Il n'y a pas d'annonces</a>
+        </div>
+        <div class="titre">Annonces Importantes</div>
+      </div>
+      <div class="ata_pa_block ata_large">
+        <div id="partenaires">
+          <div><p>Contactez nous pour devenir partenaire!</p></div>
+        </div>
+        <div id="titre-partenaire" class="titre">Nos partenaires</div>
+      </div>
+    </section>
+  </main>
+</body>
+
+<!-- SCRIPTS POUR INFO BOX ! NE PAS TOUCHER -->
+<script type="text/javascript">//<![CDATA[
+
+  function setPartners() {
+    const wrapper = document.getElementById("partenaires");
+    if (listePartenaires && listePartenaires.length) {
+      wrapper.innerHTML = "";
+
+      listePartenaires.forEach((partenaire) => {
+        const link = document.createElement("a");
+        link.href = partenaire.lien;
+        link.title = partenaire.nom;
+
+        const img = document.createElement("img");
+        img.src = partenaire.img;
+        link.appendChild(img);
+        wrapper.appendChild(link);
+      });
+    }
+  }
+
+  function setTopsites() {
+    const wrapper = document.getElementById("block_top_sites");
+    if (listeTopSites && listeTopSites.length) {
+      wrapper.innerHTML = "";
+
+      listeTopSites.forEach((site) => {
+        const link = document.createElement("a");
+        link.href = site.lien;
+        link.title = site.nom;
+        link.className = "lien_vote";
+        const img = document.createElement("img");
+        img.src = site.img;
+        link.appendChild(img);
+        wrapper.appendChild(link);
+      });
+    }
+  }
+
+  function setTopRoliste() {
+    const element = document.getElementById("top_roliste");
+    const img = document.createElement("img");
+
+    document.getElementById("roliste_link").href = topRoliste.lien;
+    img.src = topRoliste.avatar;
+    img.className = "ata_top_img";
+    element.appendChild(img);
+  }
+
+  function setTopVoteur() {
+    const element = document.getElementById("top_voteur");
+    const img = document.createElement("img");
+
+    document.getElementById("voteur_link").href = topVoteur.lien;
+    img.src = topVoteur.avatar;
+    img.className = "ata_top_img";
+    element.appendChild(img);
+  }
+
+  function setAdminAvatars() {
+    const element = document.getElementById("ata_admin_slide");
+
+    listeAdmins.forEach((admin) => {
+      const div = document.createElement("div");
+      div.className = "ata_pa_slide";
+
+      const textLink = document.createElement("a");
+      textLink.href = admin.lien;
+      textLink.textContent = admin.nom;
+      textLink.className = "ata_admin_link";
+      div.appendChild(textLink);
+      const img = document.createElement("img");
+      img.src = admin.img;
+      div.appendChild(img);
+
+      element.appendChild(div);
+    });
+  }
+
+  function toggleContext(id) {
+    const elements = document.querySelectorAll(".ata_context_element");
+    elements.forEach((el) => {
+      if (id !== el.id) {
+        el.classList.remove("ata_active");
+      } else {
+        el.classList.add("ata_active");
+      }
+    });
+  }
+
+  function setLinkContext() {
+    document.getElementById("ata_lien_context_ataraxien").href =
+      lienContexts.ataraxien;
+    document.getElementById("ata_lien_context_veskarien").href =
+      lienContexts.veskarien;
+  }
+
+  function setContextDesc() {
+    document.getElementById("veskarien_desc").textContent =
+      contextDescription.veskarien;
+    document.getElementById("ataraxien_desc").textContent =
+      contextDescription.ataraxien;
+  }
+
+  setContextDesc();
+  setAdminAvatars();
+  setLinkContext();
+  setTopRoliste();
+  setTopVoteur();
+  setTopsites();
+  setPartners();
+  //]]>
+</script>

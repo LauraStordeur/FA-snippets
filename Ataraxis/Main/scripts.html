@@ -1,0 +1,132 @@
+<!-- VARIABLES GLOBALES -->
+<script type="text/javascript">
+  //<![CDATA[
+  /** Ajouter la liste de titre de sujet importants ici. **/
+  var sujetsImportants = ["Recensement", "News"];
+  /** Ajouter la liste d'Admins et Modérateurs ici. Il y a un nombre de 4 cartes à respecter,
+   * Il faut donc doubler certaines cartes si on a pas le nombre d'admins réquis,
+   * ou avoir une carte défault pour les possitions ouvertes.
+   * Si nous avons plus d'admins que ça, on devra modifié le code un peu. **/
+  var listeAdmins = [
+    {
+      nom: "XXX",
+      img: "https://i.pinimg.com/564x/47/c8/dd/47c8dd998140ce4c93a6f82b3812f804.jpg",
+      lien: "",
+    },
+    {
+      nom: "ZZZ",
+      img: "https://i.pinimg.com/564x/d7/60/af/d760af6e1b09e05f5a63be8091814ec7.jpg",
+      lien: "",
+    },
+    {
+      nom: "XXX",
+      img: "https://i.pinimg.com/564x/47/c8/dd/47c8dd998140ce4c93a6f82b3812f804.jpg",
+      lien: "",
+    },
+    {
+      nom: "ZZZ",
+      img: "https://i.pinimg.com/564x/d7/60/af/d760af6e1b09e05f5a63be8091814ec7.jpg",
+      lien: "",
+    },
+  ];
+  /** Ajouter la liste de top-sites ici. Images carées seulement !**/
+  var listeTopSites = [
+    {
+      nom: "Top50",
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F91-913639_fire-flame-power-magic-orange-circle-ring-ringoffire.png&f=1&nofb=1",
+      lien: "",
+    },
+    {
+      nom: "Top50",
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F91-913639_fire-flame-power-magic-orange-circle-ring-ringoffire.png&f=1&nofb=1",
+      lien: "",
+    },
+    {
+      nom: "Top50",
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F91-913639_fire-flame-power-magic-orange-circle-ring-ringoffire.png&f=1&nofb=1",
+      lien: "",
+    },
+    {
+      nom: "Top50",
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F91-913639_fire-flame-power-magic-orange-circle-ring-ringoffire.png&f=1&nofb=1",
+      lien: "",
+    },
+  ];
+  /** Liste des partenaires. format de chaque partenaire :
+   *  { nom: "", lien: "", img: ""}
+   *  **/
+  var listePartenaires = [
+    {
+      nom: "machin bidulle",
+      lien: "_blank",
+      img: "https://i.pinimg.com/564x/43/83/29/43832988ef6371afb18afdab36db485d.jpg",
+    },
+    {
+      nom: "machin bidulle2",
+      lien: "_blank",
+      img: "https://i.pinimg.com/564x/77/6b/9b/776b9b87ed8ddb628c6012e62c37ada3.jpg",
+    },
+  ];
+
+  /** Avatar et lien profil du meilleur voteur du mois, images carés seulements **/
+  var topVoteur = {
+    avatar:
+      "https://i.pinimg.com/564x/20/41/aa/2041aaba4e323a4d2025c96a025dff43.jpg",
+    lien: "",
+  };
+  /** Avatar et lien profil du meilleur roliste du mois, images carés seulements! **/
+  var topRoliste = {
+    avatar:
+      "https://i.pinimg.com/564x/96/d5/04/96d50459a0422ae6f297a5b1e0635ca4.jpg",
+    lien: "",
+  };
+  /** Lien vers les pages où le context est décrit. Le bouton "découvrir" mène vers le sujet du context actif dans l'info-box
+   *  Le format de lien FA est encouragé.
+   *  Exemples:
+   *    /f16-yubai-continent-desertique?tt=1
+   *    /t170-recensement?tt=1
+   *  **/
+  var lienContexts = {
+    ataraxien: "",
+    veskarien: "",
+  };
+
+  /** Descriotion des context respectif. Une moyenne de 100-150 mots est recomendée **/
+  var contextDescription = {
+    ataraxien: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    veskarien: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+  };
+  //]]>
+</script>
+<!-- FIN VARIABLES GLOBALES -->
+
+<!-- FONCTIONS CUSTOMS -->
+<script type="text/javascript">
+  //<![CDATA[
+
+  var importantPosts = new Map();
+
+  function addNewPosts(event) {
+    importantPosts.set(event.detail.element.title, event.detail.element);
+
+    const divImportantPosts = document.getElementById("important_posts");
+    divImportantPosts.innerHTML = "";
+    importantPosts.forEach((element) => {
+      divImportantPosts.appendChild(postElement(element));
+    });
+  }
+
+  function postElement(data) {
+    const a = document.createElement("a");
+    a.href = data.uri;
+    a.title = data.title;
+    a.textContent = data.title + " | " + data.date;
+    a.className = "ata_post_pa";
+
+    return a;
+  }
+
+  document.addEventListener("add_new_post", addNewPosts.bind(this));
+  //]]>
+</script>
+<!-- FIN FONCTION CUSTOMS -->

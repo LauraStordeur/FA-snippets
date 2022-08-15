@@ -1,119 +1,226 @@
 <style>
-body {
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
-.welcome_box {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.ata_nav_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  right: 0;
-  top: 0;
-  flex-wrap: wrap;
-  height: 100vh;
-  background-color: #f07f1ccc;
-  color: #231342;
-  padding: 0 12px;
-  max-width: 150px;
-}
-.ata_nav_container > div > a {
-  padding: 10px;
-  margin: 10px 0;
-  font-size: medium;
-  background-color: #4a240a;
-}
-.ata_nav_container > div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.ata_nav_container > div > a:hover {
-  background-color: #771808;
-}
-.bodylinewidth {
-  width: 80%;
-  margin-top: 200px;
-}
-.ata_logo {
-  width: 40vw;
-}
-.ata_content_flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.ata_main_content {
-  max-width: calc(100vw - 300px);
-  padding: 70px;
-}
-.ata_menu_item {
-  width: 40px;
-}
-.mainmenu {
-  display: none;
-}
-
-
-@media screen and (max-width: 480px) {
-  .ata_main_content {
-    max-width: 100%;
-    padding: 0;
+  body {
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+
   .ata_nav_container {
     display: flex;
     flex-direction: row;
-    position: initial;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+    top: 10px;
     flex-wrap: wrap;
-    height: auto;
-    background-color: #ff9b3d;
+    background-color: #f07f1ccc;
     color: #231342;
-    padding: 12px;
-    max-width: 100%;
+    padding: 0 12px;
+  }
+  .ata_nav_container > div > a {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: medium;
+    background-color: #4a240a;
   }
   .ata_nav_container > div {
-    flex-direction: row;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ata_nav_container > div > a:hover {
+    background-color: #771808;
+  }
+  .ata_logo {
+    width: 40vw;
   }
   .ata_content_flex {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-wrap: nowrap;
   }
-}
+  .ata_main_content {
+    padding: 70px;
+  }
+  .ata_menu_item {
+    width: 30px;
+  }
+  .mainmenu {
+    display: none;
+  }
 
+  @media screen and (max-width: 480px) {
+    .ata_main_content {
+      max-width: 100%;
+      padding: 0;
+    }
+    .ata_nav_container {
+      display: flex;
+      flex-direction: row;
+      position: initial;
+      flex-wrap: wrap;
+      height: auto;
+      background-color: #ff9b3d;
+      color: #231342;
+      padding: 12px;
+      max-width: 100%;
+    }
+    .ata_nav_container > div {
+      flex-direction: row;
+      display: flex;
+    }
+    .ata_content_flex {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  .ata_pa_container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgb(95, 141, 160);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .ata_pa_titre {
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(13, 71, 122);
+  }
+  .ata_pa_nav {
+    position: sticky;
+    z-index: 1;
+    top: 85px;
+    left: 0;
+    width: 200px;
+    min-height: 300px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .ata_pa_nav_arrow {
+    background-color: rgb(90, 0, 0);
+    height: 150px;
+    -webkit-clip-path: polygon(50% 28%, 100% 61%, 100% 0, 0 0, 0 60%);
+    clip-path: polygon(50% 28%, 100% 61%, 100% 0, 0 0, 0 60%);
+    background: rgb(0, 31, 32);
+    background: rgb(196, 85, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(196, 85, 0, 1) 0%,
+      rgba(62, 33, 0, 1) 100%
+    );
+  }
+  .ata_pa_nav_items {
+    background-color: rgb(0, 124, 124);
+    min-height: 250px;
+    padding: 10px;
+    background: rgb(0, 31, 32);
+    background: rgb(196, 85, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(196, 85, 0, 1) 0%,
+      rgba(62, 33, 0, 1) 100%
+    );
+  }
+  .ata_pa_nav_items a {
+    display: block;
+    padding: 10px;
+    color: aliceblue;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px double aliceblue;
+  }
+  .ata_pa_nav_items a:hover {
+    transform: scale(1.1) translateX(5px);
+    font-weight: bold;
+    background-color: rgb(165, 97, 42);
+    box-shadow: 1px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 10px 12px 0px rgba(0, 0, 0, 0.75);
+  }
+  .ata_pa_nav_head {
+    text-transform: uppercase;
+    text-align: center;
+    color: aliceblue;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: larger;
+    background: rgb(196, 85, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(196, 85, 0, 1) 0%,
+      rgba(62, 33, 0, 1) 100%
+    );
+  }
 </style>
 
 
+  <!-- BARRE NAVIGATION -->
+  <div id="bar_nav" class="ata_nav_container">
+    <div id="bar_nav_standard">
+      <a href="/forum" alt="Accueil"
+        ><img class="ata_menu_item" src="https://i65.servimg.com/u/f65/18/75/89/41/18994410.png" alt="Home" title="Home"/></a>
+      <a href="/faq" alt="F.A.Q."
+        ><img class="ata_menu_item" src="https://i65.servimg.com/u/f65/18/75/89/41/17355410.png" alt="FAQ" title="Foire au Questions"/></a>
+      <a href="/search" alt="Rechercher"
+        ><img class="ata_menu_item" src="https://i65.servimg.com/u/f65/18/75/89/41/81037310.png" alt="Search" title="Recherches"/></a>
+      <a href="/memberlist" alt="Membres"
+        ><img class="ata_menu_item" src="https://i65.servimg.com/u/f65/18/75/89/41/84910510.png" alt="Membres" title="Membres"/></a>
+      <a href="/profile?mode=editprofile" alt="Profil"
+        ><img class="ata_menu_item" src="https://i.servimg.com/u/f65/18/75/89/41/10673810.png" alt="Edit profile" title="Editer profile"/></a>
+    </div>
 
+    <div id="bar_nav_module">
+      <!-- BEGIN switch_user_logged_in -->
+      <a href="/login?logout" alt="Déconnexion"
+        ><img class="ata_menu_item"
+          src="https://i.servimg.com/u/f65/18/75/89/41/76662710.png"
+          alt="Logout"
+          title="Logout" /></a
+      ><br />
+      <!-- END switch_user_logged_in -->
+      <!-- BEGIN switch_user_logged_out -->
+      <a href="/login" alt="Connexion"
+        ><img class="ata_menu_item"
+          src="https://i.servimg.com/u/f65/18/75/89/41/30438710.png"
+          alt="Login"
+          title="Login"
+      /></a>
+      <a href="/register" alt="S'inscrire"
+        ><img class="ata_menu_item"
+          src="https://i.servimg.com/u/f65/18/75/89/41/18777811.png"
+          alt="S'inscrire"
+          title="S'inscrire"
+      /></a>
+      <!-- END switch_user_logged_out -->
+    </div>
+        <!-- BEGIN switch_user_logged_in -->
+        <div class="ata_avatar_container">
+          <div class="ata_avatar"></div><div class="ata_txt_avatar"></div>
+      </div>
 
-<!-- BARRE NAVIGATION -->
-<div style="visibility:hidden">{GENERATED_NAV_BAR}</div>
-<div id="bar_nav" class="ata_nav_container">
- <div id="bar_nav_standard">
- <a href="/forum" alt="Accueil"><img class="ata_menu_item" src="https://i65.servimg.com/u/f65/18/75/89/41/18994410.png" alt="Home" title="Home"></a>
- <a href="/faq" alt="F.A.Q."><img class="ata_menu_item" src="https://i65.servimg.com/u/f65/18/75/89/41/17355410.png" alt="FAQ" title="Foire au Questions"></a>
- <a href="/search" alt="Rechercher"><img class="ata_menu_item" src="https://i65.servimg.com/u/f65/18/75/89/41/81037310.png" alt="Search" title="Recherches"></a>
- <a href="/memberlist" alt="Membres"><img class="ata_menu_item" src="https://i65.servimg.com/u/f65/18/75/89/41/84910510.png" alt="Membres" title="Membres"></a>
- <a href="/profile?mode=editprofile" alt="Profil"><img class="ata_menu_item" src="https://i.servimg.com/u/f65/18/75/89/41/10673810.png" alt="Edit profile" title="Edit profile"></a>
- </div>
-
- <div id="bar_nav_modul">
- <!-- BEGIN switch_user_logged_in -->
- <a href="/login?logout" alt="Déconnexion"><img class="ata_menu_item" src="https://i.servimg.com/u/f65/18/75/89/41/76662710.png" alt="Logout" title="Logout"></a><br />
- <!-- END switch_user_logged_in -->
- <!-- BEGIN switch_user_logged_out -->
- <a href="/login" alt="Connexion"><img class="ata_menu_item" src="https://i.servimg.com/u/f65/18/75/89/41/30438710.png" alt="Login" title="Login"></a>
- <a href="/register" alt="S'inscrire"><img class="ata_menu_item" src="https://i.servimg.com/u/f65/18/75/89/41/18777811.png" alt="Register" title="Register"></a>
- <!-- END switch_user_logged_out -->
- </div>
-</div>
-<!-- BARRE NAVIGATION -->
+      <script type="text/javascript">$(function(){$('.ata_avatar').html(_userdata.avatar);{$('.ata_txt_avatar').html( _userdata.username);}});</script>
+      <!-- END switch_user_logged_in -->
+  </div>
+  <div style="visibility: hidden">{GENERATED_NAV_BAR}</div>
+  <!-- BARRE NAVIGATION -->
+  <!-- LIENS UTILES -->
+  <div class="ata_pa_nav">
+    <div class="ata_pa_nav_head">Liens utiles</div>
+    <div class="ata_pa_nav_items">
+      <a href="/">Acceuil</a>
+      <a href="/f33-annonces-co">Les News</a>
+      <a href="/f74-reglement">Règlement</a>
+      <a href="/f73-guide">Guide</a>
+      <a href="/f5-lore">Lore</a>
+      <a href="/f72-factions">Factions</a>
+      <a href="/f71-races">Races</a>
+      <a href="/f75-avatars">Avatars</a>
+      <a href="/f21-predefinis">Prédéfinis</a>
+    </div>
+    <div class="ata_pa_nav_arrow"></div>
+  </div>
+  <!-- Contenu -->

@@ -1,4 +1,3 @@
-
 <!-- BEGIN catrow --><!-- BEGIN tablehead -->
 <section class="ata_title_container">{catrow.tablehead.L_FORUM}</section>
 <!-- END tablehead -->
@@ -19,15 +18,12 @@
       <!-- BEGIN avatar -->
       {catrow.forumrow.avatar.LAST_POST_AVATAR}
       <!-- END avatar -->
-      <div class="ata_last_post">
-        Dernier post: {catrow.forumrow.LAST_POST}
-      </div>
+      <div class="ata_last_post">Dernier post: {catrow.forumrow.LAST_POST}</div>
     </div>
   </section>
 </a>
 
 <section class="ata_container_under_card">
-
   <section class="ata_sub_cat_row">
     <!-- emplacement des sous-catégories -->
     {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
@@ -35,10 +31,42 @@
   <div class="ata_topic_number">
     S : {catrow.forumrow.TOPICS} / R: {catrow.forumrow.POSTS}
   </div>
-
-
 </section>
+<script type="text/javascript">
+  $(".ata_sub_cat_row").each(function () {
+    $(this).html($(this).html().replace(/>, /g, "><br />"));
+  });
 
+  function parseElementPost() {
+    const post = `"{catrow.forumrow.LAST_POST}"`;
+    const datePost = post.split("<br />")[1];
+
+    const element = document.createElement("div");
+    element.innerHTML = `"{catrow.forumrow.LAST_POST}"`;
+    const link = element.querySelector("a");
+    const uriPost = link.href;
+    const title = link.title;
+
+    return { date: datePost, uri: uriPost, title: title };
+  }
+
+  function sendNewAnnouncementEvent() {
+    const element = parseElementPost();
+    if (sujetsImportants.includes(element.title)) {
+      var eventAddPost = new CustomEvent("add_new_post", {
+        detail: {
+          element: element,
+        },
+      });
+
+      document.dispatchEvent(eventAddPost);
+    }
+  }
+
+  if (`"{catrow.forumrow.LAST_POST}"` != `""`) {
+    sendNewAnnouncementEvent();
+  }
+</script>
 <!-- END forumrow -->
 
 <!-- END catrow -->
