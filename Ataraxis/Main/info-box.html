@@ -98,22 +98,6 @@
     flex-direction: column;
     gap: 10px;
   }
-  .ata_pa_sub_block {
-    background-color: rgba(10, 15, 58, 0.767);
-    position: relative;
-    min-height: 100px;
-    max-height: 200px;
-    max-width: 200px;
-    overflow: hidden;
-    flex-grow: 1;
-    filter: grayscale(100%);
-  }
-  .ata_pa_sub_block:hover {
-    filter: grayscale(0%);
-    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
-  }
   .ata_small {
     flex-grow: 1;
   }
@@ -121,7 +105,11 @@
     flex-grow: 2;
   }
   .ata_top_img {
-    max-width: 200px;
+    max-height: 150px;
+    filter: grayscale(100%);
+  }
+  .ata_top_img:hover {
+    filter: grayscale(0%);
   }
   .ata_pa_contenu a {
     color: aliceblue;
@@ -275,32 +263,22 @@
     padding-bottom: 40px;
   }
   #partenaires > a > img {
-    height: 125px;
+    height: 55px;
     filter: grayscale(100%);
-    transition: filter 1s;
-    transition-timing-function: ease-out;
+    animation: glow 3s infinite;
   }
-  #partenaires > div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    background: url(https://i.pinimg.com/564x/43/83/29/43832988ef6371afb18afdab36db485d.jpg);
-    background-position: center;
-    background-size: cover;
-    align-items: flex-start;
-  }
-  #partenaires > div > p {
+  #partenaires > p {
     text-align: center;
-    background-color: rgba(175, 87, 16, 0.774);
+    background-color: rgb(175, 88, 16);
     backdrop-filter: blur(5px);
     flex-grow: 1;
     margin: 0;
-    padding: 8px 0;
+    padding: 15px 0;
     font-weight: bold;
   }
   #partenaires > a > img:hover {
     filter: grayscale(0%);
+    animation: none;
   }
 
   .lien_vote:hover {
@@ -308,6 +286,18 @@
     -webkit-filter: sepia(84%) brightness(106%) hue-rotate(168deg)
       saturate(311%);
     -moz-filter: sepia(84%) brightness(106%) hue-rotate(168deg) saturate(311%);
+  }
+
+  @keyframes glow {
+    0% {
+      filter: grayscale(100%);
+    }
+    50% {
+      filter: grayscale(0%);
+    }
+    100% {
+      filter: grayscale(100%);
+    }
   }
 
   @keyframes slideCard {
@@ -396,7 +386,38 @@
   /** Liste des partenaires. format de chaque partenaire :
    *  { nom: "", lien: "", img: ""}
    *  **/
-  var listePartenaires = [];
+  var listePartenaires = [
+    {
+      nom: "",
+      lien: "",
+      img: "https://i.pinimg.com/564x/54/41/9b/54419be36328dbbaecb9c78a998d5842.jpg",
+    },
+    {
+      nom: "",
+      lien: "",
+      img: "https://i.pinimg.com/564x/97/6d/5d/976d5d1f99a8e0354e63d7306487b367.jpg",
+    },
+    {
+      nom: "",
+      lien: "",
+      img: "https://i.pinimg.com/564x/e7/49/2f/e7492fc59a2fd9ed397958317dba4f0c.jpg",
+    },
+    {
+      nom: "",
+      lien: "",
+      img: "https://i.pinimg.com/564x/7e/34/1b/7e341b34d579a2455e08be08c1775d2d.jpg",
+    },
+    {
+      nom: "",
+      lien: "",
+      img: "https://i.pinimg.com/564x/c4/24/71/c42471075c901571984358ddeb68708e.jpg",
+    },
+    {
+      nom: "",
+      lien: "",
+      img: "https://i.pinimg.com/564x/e7/63/93/e76393b25ae8d292be59fd896f852a95.jpg",
+    },
+  ];
 
   /** Avatar et lien profil du meilleur voteur du mois, images carés seulements **/
   var topVoteur = {
@@ -467,20 +488,6 @@
           </div>
         </section>
       </div>
-      <div class="ata_pa_block">
-        <div class="ata_pa_sub_block">
-          <a id="roliste_link" href="_blank">
-            <div id="top_roliste"></div>
-            <div class="titre">Top Roliste</div></a
-          >
-        </div>
-        <div class="ata_pa_sub_block">
-          <a id="voteur_link" href="_blank">
-            <div id="top_voteur"></div>
-            <div class="titre">Top Voteur</div></a
-          >
-        </div>
-      </div>
     </section>
     <section class="ata_pa_contenu">
       <div class="ata_pa_block">
@@ -495,9 +502,26 @@
         </div>
         <div class="titre">Annonces Importantes</div>
       </div>
+      <div class="ata_pa_block">
+        <a id="roliste_link" href="_blank">
+          <div id="top_roliste"></div>
+          <div class="titre">Top Roliste</div></a
+        >
+      </div>
+      <div class="ata_pa_block">
+        <a id="voteur_link" href="_blank">
+          <div id="top_voteur"></div>
+          <div class="titre">Top Voteur</div></a
+        >
+      </div>
+    </section>
+    <section class="ata_pa_contenu">
       <div class="ata_pa_block ata_large">
         <div id="partenaires">
-          <div><p>Contactez nous pour devenir partenaire!</p></div>
+          <p>
+            Contactez nous pour devenir partenaire! Nous serons ravi de serrer
+            votre main!
+          </p>
         </div>
         <div id="titre-partenaire" class="titre">Nos partenaires</div>
       </div>
@@ -506,12 +530,14 @@
 </body>
 
 <!-- SCRIPTS POUR INFO BOX ! NE PAS TOUCHER -->
-<script type="text/javascript">//<![CDATA[
+<script type="text/javascript">
+  //<![CDATA[
 
   function setPartners() {
     const wrapper = document.getElementById("partenaires");
     if (listePartenaires && listePartenaires.length) {
       wrapper.innerHTML = "";
+      let delay = 2;
 
       listePartenaires.forEach((partenaire) => {
         const link = document.createElement("a");
@@ -520,8 +546,10 @@
 
         const img = document.createElement("img");
         img.src = partenaire.img;
+        img.style = `animation-delay: ${delay}s;`;
         link.appendChild(img);
         wrapper.appendChild(link);
+        delay = delay + 2;
       });
     }
   }
