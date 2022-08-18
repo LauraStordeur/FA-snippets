@@ -30,6 +30,37 @@ body::-webkit-scrollbar {
   flex-direction: row;
   justify-content: center;
 }
+.ata_title_section {
+  margin: 10vh 0 20px 0;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.ata_title_section > h2 {
+  padding: 15px;
+  font-size: 1.6rem;
+  min-width: 55vw;
+  margin: 0;
+  background: rgb(8, 75, 96);
+  background: linear-gradient(
+    90deg,
+    rgba(152, 42, 42, 1) 0%,
+    rgb(253, 137, 29) 100%
+  );
+  font-weight: bold;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.ata_arrow_title {
+  background-color: rgb(253, 137, 29);
+  width: 100px;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  transform: translateX(-2px);
+}
 .ata_nav_container {
   display: flex;
   flex-direction: row;
@@ -747,7 +778,6 @@ a.nav {
     rgba(0, 31, 32, 1) 0%,
     rgba(14, 116, 103, 1) 100%
   );
-  max-width: 1200px;
   height: 80vh;
   max-height: 600px;
   display: flex;
@@ -800,8 +830,9 @@ a.nav {
 }
 .ata_predef_resume {
   padding: 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: justify;
+  max-width: 95%;
 }
 .free {
   background-color: rgba(0, 128, 0, 0.438);
@@ -819,13 +850,13 @@ a.nav {
   background-color: rgba(0, 0, 0, 0.432);
   padding: 15px;
   width: 350px;
-  margin-left: 15px;
+  margin-left: 10px;
   min-width: 150px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .ata_discover_button {
   background-color: #095245;
@@ -860,7 +891,6 @@ a.nav {
 
 .slider {
   margin: 0 auto;
-  max-width: 1200px;
   margin-top: 25px;
 }
 
@@ -874,7 +904,6 @@ a.nav {
 .slide_group {
   height: 100%;
   position: relative;
-  width: 100%;
 }
 
 .slide {
@@ -914,7 +943,6 @@ a.slide_btn {
 }
 
 .directional_nav {
-  max-width: 1200px;
   position: relative;
 }
 
@@ -1009,6 +1037,7 @@ a.slide_btn {
 .quantique {
   color: #42eca6;
 }
+/** PAGE ACC **/
 .ata_pa_container {
   width: 100%;
   background: rgb(63, 149, 251);
@@ -1074,22 +1103,6 @@ a.slide_btn {
   flex-direction: column;
   gap: 10px;
 }
-.ata_pa_sub_block {
-  background-color: rgba(10, 15, 58, 0.767);
-  position: relative;
-  min-height: 100px;
-  max-height: 200px;
-  max-width: 200px;
-  overflow: hidden;
-  flex-grow: 1;
-  filter: grayscale(100%);
-}
-.ata_pa_sub_block:hover {
-  filter: grayscale(0%);
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
-}
 .ata_small {
   flex-grow: 1;
 }
@@ -1097,7 +1110,11 @@ a.slide_btn {
   flex-grow: 2;
 }
 .ata_top_img {
-  max-width: 200px;
+  max-height: 150px;
+  filter: grayscale(100%);
+}
+.ata_top_img:hover {
+  filter: grayscale(0%);
 }
 .ata_pa_contenu a {
   color: aliceblue;
@@ -1139,6 +1156,9 @@ a.slide_btn {
   flex-direction: column;
   flex-grow: 1;
   gap: 8px;
+}
+.ata_context_block .titre {
+  cursor: pointer;
 }
 .ata_context_element {
   background-color: rgb(46, 105, 156);
@@ -1251,38 +1271,40 @@ a.slide_btn {
   padding-bottom: 40px;
 }
 #partenaires > a > img {
-  height: 125px;
+  height: 55px;
   filter: grayscale(100%);
-  transition: filter 1s;
-  transition-timing-function: ease-out;
+  animation: glow 3s infinite;
 }
-#partenaires > div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex-grow: 1;
-  background: url(https://i.pinimg.com/564x/43/83/29/43832988ef6371afb18afdab36db485d.jpg);
-  background-position: center;
-  background-size: cover;
-  align-items: flex-start;
-}
-#partenaires > div > p {
+#partenaires > p {
   text-align: center;
-  background-color: rgba(175, 87, 16, 0.774);
+  background-color: rgb(175, 88, 16);
   backdrop-filter: blur(5px);
   flex-grow: 1;
   margin: 0;
-  padding: 8px 0;
+  padding: 15px 0;
   font-weight: bold;
 }
 #partenaires > a > img:hover {
   filter: grayscale(0%);
+  animation: none;
 }
 
 .lien_vote:hover {
   filter: sepia(84%) brightness(106%) hue-rotate(168deg) saturate(311%);
   -webkit-filter: sepia(84%) brightness(106%) hue-rotate(168deg) saturate(311%);
   -moz-filter: sepia(84%) brightness(106%) hue-rotate(168deg) saturate(311%);
+}
+
+@keyframes glow {
+  0% {
+    filter: grayscale(100%);
+  }
+  50% {
+    filter: grayscale(0%);
+  }
+  100% {
+    filter: grayscale(100%);
+  }
 }
 
 @keyframes slideCard {
