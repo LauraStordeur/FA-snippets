@@ -1,0 +1,336 @@
+<style>
+    .cyrus_container {
+        max-width: 600px;
+        width: 600px;
+        min-height: 150px;
+        background-color: rgb(52, 52, 85);
+        position: relative;
+        color: aliceblue;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: url(https://i.pinimg.com/564x/f8/92/fc/f892fcd415b21a94c1c7e5cd4dbb9f19.jpg);
+        background-size: 100%;
+    }
+
+    .cyrus_heading {
+        height: 250px;
+        width: 600px;
+        background: url(https://media.giphy.com/media/ToMjGpPcTt3go0nrrFe/giphy.gif);
+        background-size: 100%;
+        text-align: center;
+    }
+
+    .cyrus_heading_title {
+        font-size: 36px;
+        position: absolute;
+        top: 68px;
+        width: 600px;
+        text-align: center;
+        background: rgb(8, 75, 96);
+        background: linear-gradient(0deg,
+                rgba(8, 75, 96, 1) 0%,
+                rgba(21, 167, 148, 0.48503151260504207) 100%);
+        padding: 15px 0;
+    }
+
+    .cyrus_heading_sub_title {
+        font-size: 26px;
+        position: absolute;
+        top: 140px;
+        width: 600px;
+        margin-top: 15px;
+        display: grid;
+        place-items: center;
+    }
+
+    .stage {
+        animation: animateBg 2s infinite linear;
+        background-image: linear-gradient(90deg,
+                #1c3c44bb,
+                #2aaa6a7a,
+                #1c3c44bb,
+                #2aaa6a7a);
+        background-size: 300% 100%;
+        box-shadow: 0 3px 14px #000;
+        padding: 15px 0;
+    }
+
+    .stage_red {
+        animation: animateBg 2s infinite linear;
+        background-image: linear-gradient(90deg,
+                #690000bb,
+                #ff51007a,
+                #690000bb,
+                #ff51007a);
+        background-size: 300% 100%;
+        box-shadow: 0 3px 14px #000;
+        color: red;
+        font-size: 32px;
+        padding: 15px 0;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .box_shaddow {
+        box-shadow: 0 3px 14px #000;
+    }
+
+    .cyrus_content_wrapper {
+        min-height: 150px;
+        padding: 25px;
+        border-top: 9px groove rgb(40, 89, 179);
+    }
+
+    .cyrus_content {
+        background-color: rgba(10, 56, 56, 0.808);
+        padding: 15px;
+        text-align: justify;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .cyrus_content i {
+        color: greenyellow;
+    }
+
+    .flex_row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .cyrus_img_cut {
+        -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    }
+
+    .cyrus_300 {
+        width: 300px;
+    }
+
+    .cyrus_desc {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    .cyrus_desc strong {
+        color: aquamarine;
+    }
+
+    .cyrus_devider {
+        margin-top: 15px;
+        text-align: center;
+        padding: 15px;
+        font-size: 32px;
+    }
+
+    .postbody {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cyrus_highlight {
+        font-weight: bold;
+        color: aqua;
+    }
+    a.cyrus_lien {
+        font-weight: bold;
+        color: aqua;
+    }
+    a.cyrus_lien:hover {
+        color: coral;
+    }
+    a.cyrus_lien:visited {
+        color: aquamarine;
+    }
+    @keyframes animateBg {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: 100% 0;
+        }
+    }
+</style>
+<section class="cyrus_container">
+    <div class="cyrus_heading">
+        <div class="cyrus_heading_title box_shaddow">Cyrus Malphax Schrödinger</div>
+        <div class="cyrus_heading_sub_title stage">Journal de progression.</div>
+    </div>
+    <!-- Description  -->
+    <div class="cyrus_content_wrapper">
+        <section class="cyrus_content flex_row">
+            <img class="cyrus_img_cut" width="250"
+                src="https://i.pinimg.com/564x/0f/d4/b6/0fd4b673ce864823270c90845bde5405.jpg" alt="cyrus_chess" />
+            <div class="cyrus_300 cyrus_desc">
+                <div><strong>Age: </strong> 34 ans</div>
+                <div><strong>Sexe: </strong> Homme</div>
+                <div><strong>Race: </strong> Triton</div>
+                <br />
+                <div><strong>Faction: </strong> Évolué</div>
+                <div><strong>Métier: </strong> La science à l’extrême</div>
+                <div><strong>Capacité: </strong> Résurrection Artificielle</div>
+                <div><strong>Compétence: </strong> Mémoire parfaite</div>
+                <div><strong>Bénédiction: </strong> Enfant des Flots</div>
+            </div>
+        </section>
+    </div>
+    <!-- Nom de la technologie -->
+    <div class="cyrus_devider stage">Résurrection Artificielle</div>
+    <section class="cyrus_content_wrapper">
+        <div class="cyrus_content">
+            <p>La résurrection Artificielle, ou autrement dit la passion obsessionnelle de Malphax et Cyrus. Il serait
+                probablement bien trop compliqué d’expliquer le fonctionnement exact de cette technologie, étant donné
+                qu’il ne le sait pas encore totalement. Cependant, à terme, cette technologie aurait pour but de raviver
+                les consciences de défunts. Enfin, d’une certaine façon, car une partie de la conscience ravivée serait
+                synthétique et donc, il serait impossible de répliquer entièrement la version originale. Aucun problème
+                pour Malphax, qui désire modifier les consciences plus que tout pour les rendre meilleurs. <br><br>
+
+                Au début de son parcours scientifique, Cyrus sera capable de répliquer les consciences de petits animaux
+                et de les programmer pour effectuer des commandes simples. Même si la résurrection de son frère a réussi
+                pendant un certain temps, la corruption a eu gain de cause et il n’est pas encore au stade de pouvoir
+                réaliser un Artificiel humain. Il a toutefois sauvegardé les données de conscience de ce dernier pour
+                son ultime projet. <br><br>
+
+                Son <a href="#GNAP" class="cyrus_lien">GNAP</a> lui permet de stocker les informations du cerveau de sa victime, hum, du défunt, pardon, et de
+                générer plus tard dans son labo des neurones synthétiques pour recréer un cerveau. Si au début, il a
+                commencé en gardant le cerveau original, il a vite remarqué que transporter des organes dans des délais
+                respectables pour garder les tissus intacts, n’est pas chose pratique. C’est pour cela précisément qu’il
+                a créé le GNAP. <br><br>
+
+                Il a besoin d’un labo pour pouvoir confectionner des corps, car le matériel nécessaire est considérable.
+                Il peut donc transporter des petits prototypes sans conscience et les activer plus tard avec son GNAP,
+                mais tout ce qui est d’un calibre plus grand que sa sacoche de voyage n’est pas possible.
+            </p>
+        </div>
+    </section>
+    <!-- Compétences -->
+    <div class="cyrus_devider stage">Compétences</div>
+    <section class="cyrus_content_wrapper">
+        <div class="cyrus_content">
+            <ul>
+                <li>
+                    <div class="cyrus_highlight">Compétences (niveau 5) :</div>
+                    <ul style="padding: 15px;">
+                        <li>
+                            <strong>Bénédiction Enfant des flots</strong>
+                            <p>
+                                L'eau étant le domaine où évoluent Tritons et Sirènes, c'est là qu'ils sont le plus à
+                                l'aise. Les affronter dans ces conditions causerait à coup sûr votre perte, car ils sont
+                                plus
+                                rapides qu'un navire et l'eau les aide à cicatriser leurs plaies. Quelques minutes pour
+                                des
+                                égratignures, jusqu'à quelques jours pour un membre. C'est pour cette raison qu'il est
+                                rare
+                                de voir Tritons et Sirènes sur terre quand on sait l'avantage que ça leur procure. Un
+                                avantage
+                                qui se réduit drastiquement s'ils ne restent pas à proximité de l'eau régulièrement
+                                lorsqu'ils
+                                sont sur terre.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="cyrus_highlight">Compétences (niveau 15) :</div>
+                    <ul style="padding: 15px;">
+                        <li>
+                            <strong>Mémoire parfaite</strong>
+                            <p>Le rève de tout érudit, retenir le contenu d'un livre juste en le lisant! C'est à peu
+                                près ça pour Malphax, mais ne lui demander pas de se rappeler de votre nom, il vous
+                                sortira tout et n'importe quoi, et surtout, pas le bon nom. Même s'il se souvient de
+                                beaucoup, son esprit est tellement chaotique qu'il est parfois difficile de s'y
+                                retrouver, même pour lui...</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="cyrus_highlight">Compétences (niveau 35) :</div>
+                    <ul style="padding: 15px;">
+                        <li>
+                            <strong>Astronome</strong>
+                            <p>Si vous pensez au marins se guidant sur les flots au clair des étoiles, c'est pas tout à
+                                fait ça qui interesse Cyrus. L'astronomie est selon lui une étude qui pourrait le
+                                rapprocher de son but pour comprendre la conscience dans son intégralité.</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Techniques -->
+    <div class="cyrus_devider stage">Techniques</div>
+    <section class="cyrus_content_wrapper">
+        <div class="cyrus_content">
+            <ul>
+                <li>
+                    <div class="cyrus_highlight">Techniques (niveau 5) :</div>
+                    <ul style="padding: 15px;">
+                        <li>
+                            <strong>GS -Générateur Statique- </strong> <i>(simple)</i>
+                            <p>Un petit gadget-pendentif tout simple qui permet à Malphax de faire flotter ses cheveux
+                                grâce à l'électricité statique que génère ce petit collier. Il ressemble plus à une
+                                amulette qu'autre chose et absorbe l'électricité ambiante quand Malphax est hors de
+                                l'eau. Bien conçu quand même, il est imperméable.</p>
+                        </li>
+                        <li id="GNAP">
+                            <strong>GNAP-01 - Générateur de Neurones Artificiels Portable</strong> <i>(simple)</i>
+                            <p>
+                                Pour se faciliter la tâche et pouvoir créer à sa convenance des prototypes partout où il
+                                va, Cyrus s’est confectionné un Générateur portable capable de synthétiser les neurones
+                                d’un cerveau de petite taille. Le GNAP-01 n’est pas énorme, mais il prend quand même de
+                                la place et remplit une sacoche entière à lui tout seul et pèse une dizaine de kilos. Il
+                                y a encore du progrès à
+                                faire pour vraiment pouvoir le qualifier de portable, mais bon, c’est un début, non ?
+                            </p>
+                        </li>
+                        <li>
+                            <strong>PRE -Prototype Raté Explosif-</strong> <i>(puissante)</i>
+                            <p>Quand ça foire, ça explose ! Mais c'est pratique quand c'est fait exprès ! Quand les
+                                corps Artificiel des prototypes rattent - chose courrante-,
+                                Malphax se fait un malin plaisir à les faire exploser. Ce n’est rien de spectaculaire,
+                                mais peut quand même vous brûler méchamment si vous vous prenez le souffle de
+                                l’explosion.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="cyrus_highlight">Techniques (niveau 15) :</div>
+                    <ul style="padding: 15px;">
+                        <li>
+                            <strong>MIPA -Mammifère Insignifiant Prototype Artificiel-</strong> <i>(simple)</i>
+                            <p>Petits rongeurs, petits mammifères de petite taille, Cyrus vous le transformera en petit
+                                robot artificiel avec une volonté de vivre, pour ainsi dire inexistante. C’est plus un
+                                gadget qu’autre chose et lui est peu utile. C’est une expérience plus qu’autre chose qui
+                                le ramène un peu plus prêt de son but ultime. La conscience du petit animal est en
+                                grande partie effacée et remplacée par la capacité d’écouter une unique commande vocale
+                                simple du genre : “assis”, “va chercher”, “dis bonjour”. Enfin rien de très
+                                exceptionnel ! </p>
+                        </li>
+                        <li>
+                            <strong>PIPA -Poisson Insignifiant Prototype Artificiel-</strong> <i>(simple)</i>
+                            <p>
+                                Très similaire à la technique précédente, Cyrus vous change votre poisson rouge préféré
+                                en poisson artificiel tout aussi stupide. Rassurez-vous, il tournera toujours autant en
+                                rond dans son aquarium.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>GNAP-02 - Générateur de Neurones Artificiels Portable 2</strong> <i>(simple)</i>
+                            <p>
+                                Le GNAP-02 est une version améliorée du GNAP-01 qui est d'un, bien plus petit et de
+                                deux, plus léger. L’appareil à la forme d’un bracelet allongé avec écran intégré sur
+                                lequel Malphax peut programmer le format des neurones dont il a besoin pour son futur
+                                projet Artificiel.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
